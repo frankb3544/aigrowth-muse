@@ -10,7 +10,7 @@ export default function PromptPackStrip() {
             Not ready to talk yet?
           </p>
           <p className="mt-1 text-lg leading-7 font-semibold text-brand-navy-deep/85">
-            Take the free starter prompt pack — nine copy-and-paste prompts
+            Take the free starter prompt pack — twelve copy-and-paste prompts
             for the follow-up work that leaks money. No email needed.
           </p>
         </div>

@@ -357,6 +357,7 @@ export const toolPages: ToolPage[] = [
 
 export type Post = {
   slug: string;
+  track: "Start here" | "Business" | "Realtor" | "Everyday" | "Charlotte";
   title: string;
   description: string;
   intro: string;
@@ -367,6 +368,7 @@ export type Post = {
 export const posts: Post[] = [
   {
     slug: "what-is-an-ai-audit",
+    track: "Start here",
     title: "What is an AI audit, in plain words?",
     description:
       "An AI audit is a guided walk through how your business actually runs — customers finding you, reaching you, buying, and coming back — to find the one bottleneck worth automating first.",
@@ -393,6 +395,7 @@ export const posts: Post[] = [
   },
   {
     slug: "missed-calls-cost-you",
+    track: "Business",
     title: "The phone rang. Nobody picked up. Again.",
     description:
       "Most small businesses miss calls while doing the actual work. Here's what happens to those callers — and how an AI front desk answers in seconds, books the job, and never has a busy day.",
@@ -419,6 +422,7 @@ export const posts: Post[] = [
   },
   {
     slug: "thursdays-we-build-in-public",
+    track: "Charlotte",
     title: "Thursdays, we build in public",
     description:
       "Every Thursday at Collaboration Central in Charlotte, we build something real with AI — live, in a classroom — then teach how it works. Here's what a session looks like.",
@@ -445,6 +449,7 @@ export const posts: Post[] = [
   },
   {
     slug: "the-follow-up-gap",
+    track: "Business",
     title: "The follow-up gap: where good businesses quietly lose customers",
     description:
       "The pattern our audit is built to find: the work is good, but follow-up lives in somebody's memory — and busy weeks erase it. Here's the gap, the five moments that matter, and the small system that closes it.",
@@ -478,6 +483,7 @@ export const posts: Post[] = [
   },
   {
     slug: "ai-for-realtors-human-in-charge",
+    track: "Realtor",
     title: "AI for realtors: where it genuinely helps — and where a human stays in charge",
     description:
       "Real estate runs on follow-up and paperwork, which is exactly where AI earns its place. Here's where it helps an agent's week, the one line it must never cross, and the simple rule that keeps you on the right side of it.",
@@ -511,6 +517,7 @@ export const posts: Post[] = [
   },
   {
     slug: "the-review-engine",
+    track: "Business",
     title: "The review engine: how local shops turn finished jobs into being found",
     description:
       "When a Charlotte neighbour searches for what you do, recent answered reviews are what get you the call. Here's the simple loop — ask, make it easy, answer everything — and where AI fits inside it.",
@@ -541,6 +548,40 @@ export const posts: Post[] = [
     ],
     closing:
       "Two of the free starter prompt pack's prompts are built for this loop's hardest parts — replying to any review, and turning one job photo into a post worth finding. Take those for free, and if you'd like the whole loop mapped onto your business, that's the audit's first stage, done with you.",
+  },
+  {
+    slug: "ai-at-the-kitchen-table",
+    track: "Everyday",
+    title: "AI at the kitchen table: the small jobs it quietly takes off your plate",
+    description:
+      "Not everyone needs AI for business. For most people it earns its keep on the small stuff: the letter you can't decode, the list living in your head, the message you keep not sending. Three jobs it does well today, in plain words.",
+    intro:
+      "Most talk about AI is aimed at companies. But the version most people actually use looks like a kitchen table: a confusing letter from an insurer, a week that won't organise itself, a message to a landlord you've rewritten four times. No strategy, no setup — just small jobs that take longer than they should. Those are exactly the jobs this stuff is good at.",
+    sections: [
+      {
+        heading: "The letter you can't decode",
+        paragraphs: [
+          "Official paper is written to be survived, not understood. Paste the confusing part into an AI chat and ask for it in plain words, ending with what you should actually do, in three steps or fewer. Insurance letters, school forms, medical notes, the error message on the thing that stopped working — the translation alone is worth the visit.",
+          "One habit to keep: numbers and names deserve a second look against the original. AI is a translator here, not the source — the letter is still the truth, it just finally reads like it.",
+        ],
+      },
+      {
+        heading: "The list living in your head",
+        paragraphs: [
+          "Everyone carries a rolling brain-dump: errands, birthdays, the thing the car started doing, three people to call back. Say it all out loud or type it messy, and ask for it back as a calm list — today, this week, later — with each item as one small action and the single most important thing flagged.",
+          "It takes two minutes and it is weirdly restful, because the list stops living in your head rent-free. Do it Sunday night and Monday starts lighter. This is the prompt our free members tell us they use most, and it is the simplest one we teach.",
+        ],
+      },
+      {
+        heading: "The message you keep not sending",
+        paragraphs: [
+          "The email to the school, the note to the landlord, the reply to the difficult relative of a customer complaint — the drafts that stall are never stalled on typing. They're stalled on tone. Describe what happened and what you want, ask for a draft that's firm and kind, then edit it into your own words before it goes.",
+          "Same rule as everywhere we teach: the machine drafts, you decide. If it's going to a person, it gets your read first. Your name is on it, so your judgement is the last step — the AI just got you past the blank page.",
+        ],
+      },
+    ],
+    closing:
+      "The community's Everyday path starts here — one small job at a time, no business required. The free starter prompt pack includes the two prompts this guide is built on (the brain-dump list and the plain-words explainer). Take them, try one tonight, and come tell us which job it took off your plate.",
   },
 ];
 
@@ -658,5 +699,26 @@ export const promptPack: PromptPackItem[] = [
     prompt:
       "Explain this to me like I've never seen it before: [paste anything — a letter, a contract clause, a medical note, an error message]. Plain words, short sentences, then end with: 'So what should I actually do?' answered in three steps or fewer.",
     tip: "Works on almost anything official and confusing. Understanding first, decisions second.",
+  },
+  {
+    track: "Business",
+    title: "The no-show shield",
+    prompt:
+      "Write a friendly appointment reminder text for [customer name] who is booked with my [type of business] on [day] at [time]. Include what to bring or expect: [one detail]. End with an easy way to reschedule if they can't make it. Under 50 words.",
+    tip: "Send it the day before, not the morning of — that's when reschedules can still become other bookings.",
+  },
+  {
+    track: "Realtor",
+    title: "The weekly seller update",
+    prompt:
+      "Turn these notes from this week's showings of [address] into a short update email for my sellers: [paste showing feedback, enquiry numbers, anything relevant]. Honest, calm, specific — end with what we're doing next and when they'll hear from me again.",
+    tip: "Sellers don't need more emails. They need this one, every week, saying exactly what happened.",
+  },
+  {
+    track: "Everyday",
+    title: "The week, wrangled",
+    prompt:
+      "Here is everything happening in my household this week, in no order: [paste the messy list — appointments, school things, lifts, deadlines]. Lay it out day by day, flag anything that clashes or needs booking, and end with the three things I must not forget.",
+    tip: "Feed it the fridge-door notes and the family group chat. Messy in, calm out.",
   },
 ];

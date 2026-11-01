@@ -33,7 +33,7 @@ export default function CommunityPage() {
                 Take the free starter prompt pack with you
               </h2>
               <p className="mt-3 leading-7 text-brand-navy-deep/75">
-                Nine copy-and-paste prompts for owners, realtors, and
+                Twelve copy-and-paste prompts for owners, realtors, and
                 everyday life — the same pack the free community starts
                 with. No email needed, it&apos;s just yours.
               </p>

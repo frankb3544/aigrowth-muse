@@ -31,8 +31,10 @@ export default async function PostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = posts.find((p) => p.slug === slug);
+  const postIndex = posts.findIndex((p) => p.slug === slug);
+  const post = posts[postIndex];
   if (!post) notFound();
+  const nextPost = posts[(postIndex + 1) % posts.length];
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -96,6 +98,17 @@ export default async function PostPage({
               </a>
             </div>
           </div>
+          <Link
+            href={`/learn/${nextPost.slug}`}
+            className="group mt-12 block rounded-3xl border-2 border-dashed border-brand-navy/30 bg-brand-paper/80 p-7 transition hover:border-brand-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-navy"
+          >
+            <span className="font-hand text-2xl text-brand-orange">
+              Read next · {nextPost.track}
+            </span>
+            <span className="mt-2 block font-display text-2xl leading-snug font-black text-balance text-brand-navy-deep transition group-hover:text-brand-orange">
+              {nextPost.title} →
+            </span>
+          </Link>
           <p className="mt-10">
             <Link
               href="/learn"

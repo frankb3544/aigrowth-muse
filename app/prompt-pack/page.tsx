@@ -7,7 +7,7 @@ import { SKOOL_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "The free starter prompt pack — copy, paste, done",
   description:
-    "Nine plain-words prompts for owners, realtors, and everyday life: the missed-call save, review replies, quote follow-ups, listing words, and more. Free from Build AI From Here — no email needed.",
+    "Twelve plain-words prompts for owners, realtors, and everyday life: the missed-call save, review replies, quote follow-ups, listing words, and more. Free from Build AI From Here — no email needed.",
   alternates: { canonical: "/prompt-pack" },
 };
 
@@ -24,7 +24,7 @@ export default function PromptPackPage() {
     <PageShell>
       <PageHero
         tag="Free starter pack"
-        title="Nine prompts. Copy, paste, small win."
+        title="Twelve prompts. Copy, paste, small win."
         intro="This is the starter pack our free community begins with. Pick the one that matches your day, swap the parts in [brackets] for your details, and paste it into any AI chat. No email needed, no catch — if it helps, the community is where the rest live."
         theme="notebook"
         note="Start with the one you'd use today."
