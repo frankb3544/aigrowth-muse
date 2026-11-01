@@ -476,6 +476,39 @@ export const posts: Post[] = [
     closing:
       "If you want a feel for it before any audit: our free starter prompt pack includes the missed-call save, the review reply, and the quiet-quote nudge — three of the five moments, ready to copy and paste. And if you'd like us to map your version of the gap, that's precisely what the audit is for.",
   },
+  {
+    slug: "ai-for-realtors-human-in-charge",
+    title: "AI for realtors: where it genuinely helps — and where a human stays in charge",
+    description:
+      "Real estate runs on follow-up and paperwork, which is exactly where AI earns its place. Here's where it helps an agent's week, the one line it must never cross, and the simple rule that keeps you on the right side of it.",
+    intro:
+      "Agents don't need more apps. They need their evenings back. The work that eats an agent's week isn't the skilled part — the negotiation, the read of a client, the judgement call. It's the drafting, summarising, chasing, and re-typing around it. That's the work AI is genuinely good at, and it's where we point it. But real estate has one line most industries don't, and it matters more than any time saving.",
+    sections: [
+      {
+        heading: "The busywork it eats",
+        paragraphs: [
+          "Start with drafts. A listing description from plain facts — beds, baths, features, the feel of the street — in two lengths, ready for your edit. A follow-up to yesterday's showing, written the same evening while the house is still in the buyers' heads. A reply to every review, kind ones and awkward ones, in your voice instead of a template's.",
+          "Then the paper. Inspection reports that run to dozens of pages become a plain, prioritised summary a client can actually read — what matters, what's minor, what to ask for. Commission maths, splits, caps, and 'what do I actually net on this deal' stop being spreadsheet archaeology. None of this is the job. All of it was eating the job's hours.",
+        ],
+      },
+      {
+        heading: "The line it must not cross",
+        paragraphs: [
+          "Here is the part the hype skips: marketing copy in real estate sits under fair housing law. Language that steers — who a home is 'perfect for,' what kind of people a neighbourhood suits — can be a violation even when it's cheerful, even when nobody meant anything by it. And an AI will write exactly that language, fluently and confidently, if you let it draft unchecked.",
+          "So the rule in everything we build for agents is structural, not a suggestion: AI drafts, a human reads, then it ships. Every listing description, every ad, every piece of client-facing marketing gets an agent's eyes before it goes anywhere public. The ten seconds that takes is the cheapest compliance you will ever buy.",
+        ],
+      },
+      {
+        heading: "A simple rule to work by",
+        paragraphs: [
+          "If it's private and it's paperwork, let the machine run — summaries, drafts, maths, first passes. If it's public, or it's about people, you read it first. That one rule captures nearly everything: speed where speed is safe, judgement where judgement is the job.",
+          "Worked that way, AI doesn't make an agent sound like a robot. It does the opposite — it hands back the hours that let the agent sound like themselves, in more places, on the same day the work happened.",
+        ],
+      },
+    ],
+    closing:
+      "Our community has a whole track for realtors, and the free starter prompt pack includes the listing-words, after-showing, and open-house prompts — each one written with the human-review step built in. Start there, or book the audit and we'll map where AI fits your week, line by line.",
+  },
 ];
 
 /* ------------------------------------- FAQ ------------------------------------- */

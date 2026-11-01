@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Diagnostic from "@/components/Diagnostic";
+import PromptPackStrip from "@/components/PromptPackStrip";
 import Consulting from "@/components/Consulting";
 import Booking from "@/components/Booking";
 import Process from "@/components/Process";
@@ -21,6 +22,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Diagnostic />
+        <PromptPackStrip />
         <Consulting />
         <Booking />
         <Process />
