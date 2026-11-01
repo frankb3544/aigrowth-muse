@@ -45,3 +45,11 @@ export const auditPaymentHref = paymentConfigured
   : "#book";
 
 export const AUDIT_PRICE = "$199";
+
+/** Canonical production origin for metadata, sitemap, and structured data. */
+export const SITE_URL = "https://buildaifromhere.com";
+
+export const SITE_NAME = "Build AI From Here";
+
+export const SITE_TAGLINE =
+  "No coding. No overwhelm. Just practical AI, one small win at a time.";

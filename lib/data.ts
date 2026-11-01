@@ -235,6 +235,216 @@ export const comparisonRows: ComparisonRow[] = [
   { label: "Member pricing on audits and tools", free: false, basic: true },
 ];
 
+/* ------------------------------ Tool detail pages ------------------------------ */
+
+export type ToolPage = {
+  slug: string;
+  name: string;
+  href: string;
+  linkLabel: string;
+  tagline: string;
+  description: string;
+  stat?: string;
+  whoFor: string;
+  points: string[];
+};
+
+export const toolPages: ToolPage[] = [
+  {
+    slug: "closepay",
+    name: "ClosePay",
+    href: "https://closepay.app",
+    linkLabel: "Visit ClosePay",
+    tagline: "Know what you actually made on every deal.",
+    description:
+      "ClosePay tracks a real estate agent's commission income down to the penny, deal by deal — so the number in your head and the number on the check finally match.",
+    stat: "Realtor usage up 30% and growing",
+    whoFor: "Real estate agents who want their real net, not a guess.",
+    points: [
+      "Broker splits calculated on every closing",
+      "Progress toward your annual cap, always current",
+      "Referral fees, franchise royalties, E&O and per-transaction fees tracked",
+      "Your exact net payout on each deal, before the check arrives",
+      "A what-if simulator for offers and price changes",
+      "Brokerage-plan comparison, so you can see which split actually pays you more",
+    ],
+  },
+  {
+    slug: "vibizm",
+    name: "Vibizm",
+    href: "https://vibizm.com/",
+    linkLabel: "Visit Vibizm",
+    tagline: "Start with an idea. Leave with something you can actually use.",
+    description:
+      "Vibizm is an idea development and execution platform. It takes a rough idea and shapes it into an execution-ready output — with the structured prompts, flows, and plans to actually build it.",
+    stat: "Where our content systems get built",
+    whoFor: "Anyone with an idea stuck in their head and no plan to build it.",
+    points: [
+      "Turns rough ideas into structured, buildable plans",
+      "Outputs for apps, videos, images, and music",
+      "Guided flows instead of a blank page",
+      "No code required at any step",
+    ],
+  },
+  {
+    slug: "inspect-sumo",
+    name: "Inspect Sumo",
+    href: "https://inspectsumo.com",
+    linkLabel: "Visit Inspect Sumo",
+    tagline: "A 50-page inspection report, made clear in under 2 minutes.",
+    description:
+      "Inspect Sumo turns any home inspection PDF into a client-ready summary your buyers and sellers can actually understand — defects sorted by severity, with repair cost estimates and a repair-request letter ready to send.",
+    whoFor: "Agents, buyers, sellers, and investors who read inspection reports.",
+    points: [
+      "Upload any inspection PDF and get a clear summary in under 2 minutes",
+      "Defects prioritised: Critical, Major, and Moderate",
+      "Repair cost estimates alongside each issue",
+      "A repair-request letter generated from the findings",
+      "First report free",
+    ],
+  },
+  {
+    slug: "nurse-k",
+    name: "Nurse K",
+    href: "https://nurse-k-demo.vercel.app/",
+    linkLabel: "Visit Nurse K",
+    tagline: "A calm daily dashboard for nursing students.",
+    description:
+      "Nurse K keeps a nursing student's day in one calm place: today's classes, upcoming deadlines across their NURS courses, and small, steady daily review that builds clinical confidence over time.",
+    whoFor: "Nursing students juggling classes, deadlines, and clinicals.",
+    points: [
+      "Today's classes at a glance",
+      "Upcoming NURS-course deadlines in one list",
+      "Small, steady daily review sessions",
+      "Built to build clinical confidence, day by day",
+    ],
+  },
+  {
+    slug: "cobles-landing-reservations",
+    name: "Cobles Landing Reservations",
+    href: "https://cobles-landing-reservations.vercel.app/",
+    linkLabel: "Visit Cobles Landing Reservations",
+    tagline: "Bookings for a 25-acre family retreat, handled end to end.",
+    description:
+      "The reservation and operations platform behind Coble's Landing, a 25-acre family retreat in Polkton, North Carolina. It manages guest stays, camping sites, experiences, and events — bookings, deposits, and automated guest messaging included.",
+    whoFor: "The team running Coble's Landing — and guests booking a stay.",
+    points: [
+      "Bookings for camping sites, cabins, fishing, and gatherings",
+      "Deposits handled as part of the booking flow",
+      "Automated messaging keeps guests informed",
+      "Stays, sites, experiences, and events tracked in one place",
+    ],
+  },
+  {
+    slug: "salintus",
+    name: "Salintus",
+    href: "https://salintus.com/",
+    linkLabel: "Visit Salintus",
+    tagline: "Mental fitness without therapy.",
+    description:
+      "Salintus is a voice-first, non-clinical app for clearing your head. Talk it out, and it helps structure your thoughts in real time — every session ends with a clear takeaway and one next step.",
+    whoFor: "Busy minds that think better out loud.",
+    points: [
+      "Voice-first: talk it out instead of typing",
+      "Your thoughts structured in real time as you speak",
+      "Every session ends with a clear takeaway and next step",
+      "Non-clinical and private — mental fitness, not treatment",
+    ],
+  },
+];
+
+/* --------------------------------- Learn posts --------------------------------- */
+
+export type Post = {
+  slug: string;
+  title: string;
+  description: string;
+  intro: string;
+  sections: { heading: string; paragraphs: string[] }[];
+  closing: string;
+};
+
+export const posts: Post[] = [
+  {
+    slug: "what-is-an-ai-audit",
+    title: "What is an AI audit, in plain words?",
+    description:
+      "An AI audit is a guided walk through how your business actually runs — customers finding you, reaching you, buying, and coming back — to find the one bottleneck worth automating first.",
+    intro:
+      "People hear “audit” and picture a clipboard and a lecture. Ours is closer to a walk-through with a flashlight: we look at how your business actually runs, day to day, and find the one spot where work piles up, money leaks, or customers quietly disappear.",
+    sections: [
+      {
+        heading: "The four parts we walk through",
+        paragraphs: [
+          "Getting seen — do people nearby know you exist, and do they remember you after the first meeting? Then getting enquiries — when someone does find you, is the next step easy, or does the phone ring while you're busy doing the work?",
+          "Turning enquiries into customers — quotes, follow-ups, and reminders, and whether they happen on their own or depend on you remembering after a long day. And keeping customers coming back — reviews, check-ins, and referrals, or silence after the job is done.",
+        ],
+      },
+      {
+        heading: "What you walk away with",
+        paragraphs: [
+          "One named bottleneck — the single thing costing you the most time or money — and a written plan with the top three automations to build, in order. Not a 40-page report. A short plan you could act on yourself, with the community, or with us in a Build Sprint.",
+          "The point of the audit is order. Most businesses don't need ten new tools; they need the right one, first. Automate the bottleneck and the next one shows itself — that's the whole method.",
+        ],
+      },
+    ],
+    closing:
+      "The Pro AI Audit is $199, and it's book first, pay after: pick a time, get it on the calendar, and only then does the payment link arrive.",
+  },
+  {
+    slug: "missed-calls-cost-you",
+    title: "The phone rang. Nobody picked up. Again.",
+    description:
+      "Most small businesses miss calls while doing the actual work. Here's what happens to those callers — and how an AI front desk answers in seconds, books the job, and never has a busy day.",
+    intro:
+      "It happens on ladders, under sinks, in showings, and mid-haircut: the phone rings, your hands are full, and by the time you call back, the customer has already booked whoever answered first. It's nobody's fault. It's a systems problem — and systems problems have systems answers.",
+    sections: [
+      {
+        heading: "What a missed call really costs",
+        paragraphs: [
+          "A missed call isn't a missed conversation; it's usually a missed job. The caller had a problem, a budget, and a deadline — and a list of other businesses one search away. Calling back an hour later is better than nothing, but you're often calling back someone who has already moved on.",
+          "Multiply that by every busy day in a month and it's real money walking past — quietly, because the phone never tells you what it cost.",
+        ],
+      },
+      {
+        heading: "What an AI front desk does instead",
+        paragraphs: [
+          "The fix isn't answering faster; it's answering instantly, every time. A missed call gets a text back within seconds — “Sorry we missed you, what do you need?” — and the conversation continues by text while you finish the job you're on.",
+          "Questions get answered on the spot from your own information, and booking a time takes one tap. At 9pm, on weekends, mid-job. Nothing fancy, nothing robotic — just no caller ever hitting a wall again.",
+        ],
+      },
+    ],
+    closing:
+      "This is usually the first system we build after an audit, because it pays for itself fastest. Start with the audit and we'll show you exactly where your version of it should live.",
+  },
+  {
+    slug: "thursdays-we-build-in-public",
+    title: "Thursdays, we build in public",
+    description:
+      "Every Thursday at Collaboration Central in Charlotte, we build something real with AI — live, in a classroom — then teach how it works. Here's what a session looks like.",
+    intro:
+      "Most AI teaching is someone talking at slides. Ours is the opposite: every Thursday, in a real classroom at Collaboration Central in Charlotte, we build something real with AI — live, mistakes and all — and then teach exactly how it works.",
+    sections: [
+      {
+        heading: "Build first, teach second",
+        paragraphs: [
+          "A session starts with a real problem from a real local business or nonprofit. We build the solution on the spot — a working tool, an automation, a small system — using the same tools anyone in the room could open that evening.",
+          "Then we slow down and teach it: what we clicked, what we typed, what we'd do differently. You leave with the pattern, not just the notes.",
+        ],
+      },
+      {
+        heading: "The Automation Lab",
+        paragraphs: [
+          "Once a month, the Thursday session becomes the Automation Lab: one full automation, built live for one local business or nonprofit, with everybody in the room learning how it works as it comes together.",
+          "It's the fastest way we know to learn this stuff — watch a real thing get built for a real neighbour, then go build your version.",
+        ],
+      },
+    ],
+    closing:
+      "The community side lives on Skool, where the daily tips and weekly tool videos land between Thursdays. Join free, look around, and come build with us.",
+  },
+];
+
 /* ------------------------------------- FAQ ------------------------------------- */
 
 export type Faq = {
