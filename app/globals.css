@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fff7e8;
+  --foreground: #101c3f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Build AI From Here brand tokens */
+  --color-brand-navy: #1b2d6b;
+  --color-brand-navy-deep: #0d1838;
+  --color-brand-navy-ink: #101c3f;
+  --color-brand-orange: #f97316;
+  --color-brand-amber: #fbbf24;
+  --color-brand-sky: #93c5fd;
+  --color-brand-cream: #fff7e8;
+  --color-brand-paper: #fffdf7;
+
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-fraunces);
+  --font-hand: var(--font-caveat);
+}
+
+@layer components {
+  /* Warm paper texture: faint dot grid over the cream base */
+  .paper-texture {
+    background-image: radial-gradient(
+      rgba(27, 45, 107, 0.07) 1px,
+      transparent 1.4px
+    );
+    background-size: 22px 22px;
+  }
+
+  /* Highlighter stroke behind a word, like a marker on paper */
+  .marker {
+    background-image: linear-gradient(
+      100deg,
+      rgba(251, 191, 36, 0) 0%,
+      rgba(251, 191, 36, 0.6) 3%,
+      rgba(251, 191, 36, 0.6) 97%,
+      rgba(251, 191, 36, 0) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 42%;
+    background-position: 0 92%;
+    padding: 0 0.12em;
+  }
+
+  .marker-orange {
+    background-image: linear-gradient(
+      100deg,
+      rgba(249, 115, 22, 0) 0%,
+      rgba(249, 115, 22, 0.38) 3%,
+      rgba(249, 115, 22, 0.38) 97%,
+      rgba(249, 115, 22, 0) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 42%;
+    background-position: 0 92%;
+    padding: 0 0.12em;
+  }
+
+  /* Little strip of tape on the top edge of a sticky note / card */
+  .tape {
+    position: relative;
+  }
+
+  .tape::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    width: 96px;
+    height: 24px;
+    transform: translateX(-50%) rotate(-2deg);
+    background: rgba(251, 191, 36, 0.55);
+    border-left: 1px dashed rgba(27, 45, 107, 0.18);
+    border-right: 1px dashed rgba(27, 45, 107, 0.18);
+    box-shadow: 0 1px 3px rgba(13, 24, 56, 0.12);
+    z-index: 1;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-brand-navy/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family:
+      var(--font-manrope),
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-brand-amber);
+    color: var(--color-brand-navy-deep);
+  }
+}
