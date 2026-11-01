@@ -509,6 +509,39 @@ export const posts: Post[] = [
     closing:
       "Our community has a whole track for realtors, and the free starter prompt pack includes the listing-words, after-showing, and open-house prompts — each one written with the human-review step built in. Start there, or book the audit and we'll map where AI fits your week, line by line.",
   },
+  {
+    slug: "the-review-engine",
+    title: "The review engine: how local shops turn finished jobs into being found",
+    description:
+      "When a Charlotte neighbour searches for what you do, recent answered reviews are what get you the call. Here's the simple loop — ask, make it easy, answer everything — and where AI fits inside it.",
+    intro:
+      "Somebody in Charlotte needs what you do. They search, they get a short list, and they call the shop that looks alive: recent reviews, in the owner's own voice, every one answered. Nobody built that on purpose, usually — it accumulated, or it didn't. The good news: being found this way isn't advertising. It's a loop you can run on the back of work you're already doing.",
+    sections: [
+      {
+        heading: "Why reviews decide the call",
+        paragraphs: [
+          "A searcher can't judge your work from a listing. So they borrow other customers' judgement instead: how many reviews, how recent, and — the part most shops miss — whether the owner shows up in the replies. An answered review tells a stranger two things at once: people hire this shop, and a real person is paying attention.",
+          "That is why the quiet shops lose calls they never hear about. It's rarely price, and it isn't skill. The other shop simply looked more alive at the exact moment the decision was made. The gap is small, and it compounds weekly — which is precisely why a system beats an effort here.",
+        ],
+      },
+      {
+        heading: "The loop: ask, make it easy, answer everything",
+        paragraphs: [
+          "Three parts, all boring, all decisive. Ask at the right moment: when the job is done and the customer is happiest — not a week later in an invoice footer. Make it one tap: a short link or a code they can scan, because every extra step quietly halves who bothers. Answer everything: the five-stars get thanks with a specific detail, the awkward ones get honesty and a fix, in public, in your voice.",
+          "Run that loop on every finished job and reviews stop being weather — something that happens to you — and become a flywheel: more calls, more jobs, more reviews. It's the first stage of the walk we do on every audit (getting seen) because it's the one that feeds all the others.",
+        ],
+      },
+      {
+        heading: "Where AI fits — and where it doesn't",
+        paragraphs: [
+          "AI's job in the loop is the remembering and the drafting. It can keep the ask from being forgotten by tying it to the finished job, draft each reply in your voice from the review itself, and surface the one awkward review before it sits unanswered for a month. That's real time handed back, every single week.",
+          "What it doesn't do is press send on anything public without your eyes on it. A reply is your name in public — you read it first, same rule as everything client-facing we build. The loop is the system; the judgement stays yours.",
+        ],
+      },
+    ],
+    closing:
+      "Two of the free starter prompt pack's prompts are built for this loop's hardest parts — replying to any review, and turning one job photo into a post worth finding. Take those for free, and if you'd like the whole loop mapped onto your business, that's the audit's first stage, done with you.",
+  },
 ];
 
 /* ------------------------------------- FAQ ------------------------------------- */
