@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Community from "@/components/Community";
 import FinalCta from "@/components/FinalCta";
 import Proof from "@/components/Proof";
@@ -24,6 +25,28 @@ export default function CommunityPage() {
       />
       <Community variant="clubhouse" />
       <Proof variant="notes" />
+      <section className="pb-16 lg:pb-24">
+        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+          <div className="tape relative flex rotate-[-0.4deg] flex-col items-start gap-5 rounded-3xl border-2 border-brand-amber bg-brand-amber/20 p-8 shadow-lg shadow-brand-navy/10 sm:p-10 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-2xl">
+              <h2 className="font-display text-3xl font-black text-balance text-brand-navy-deep">
+                Take the free starter prompt pack with you
+              </h2>
+              <p className="mt-3 leading-7 text-brand-navy-deep/75">
+                Nine copy-and-paste prompts for owners, realtors, and
+                everyday life — the same pack the free community starts
+                with. No email needed, it&apos;s just yours.
+              </p>
+            </div>
+            <Link
+              href="/prompt-pack"
+              className="shrink-0 rounded-full bg-brand-navy px-7 py-3.5 text-base font-extrabold text-white shadow-md transition hover:bg-brand-navy-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-navy"
+            >
+              Get the free pack
+            </Link>
+          </div>
+        </div>
+      </section>
       <FinalCta />
     </PageShell>
   );

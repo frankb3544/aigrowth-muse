@@ -484,3 +484,80 @@ export const faqs: Faq[] = [
       "No. No coding, no jargon, no setup headaches. If you can describe the problem in plain words, you're ready — we build in everyday tools and explain every step as we go.",
   },
 ];
+
+export type PromptPackItem = {
+  track: "Business" | "Realtor" | "Everyday";
+  title: string;
+  prompt: string;
+  tip: string;
+};
+
+/**
+ * The free starter prompt pack — the lead magnet. Copy, swap the
+ * [bracketed] bits, paste into any AI chat. Plain words, small wins.
+ */
+export const promptPack: PromptPackItem[] = [
+  {
+    track: "Business",
+    title: "The missed-call save",
+    prompt:
+      "Write a short, friendly text message I can send to a customer whose call I missed at my [type of business]. Apologise briefly, say I will call back by [time], and give them one helpful next step. Keep it under 60 words and warm, not salesy.",
+    tip: "Save it in your phone's notes. The best follow-up is the one that actually gets sent.",
+  },
+  {
+    track: "Business",
+    title: "Reply to any review",
+    prompt:
+      "Here is a Google review for my business: [paste review]. Write a reply in my voice — grateful for the kind words, honest about anything that went wrong, and one specific thing we will do better. Under 80 words, no corporate speak.",
+    tip: "Works for five stars and three stars. Replying at all puts you ahead of most competitors.",
+  },
+  {
+    track: "Business",
+    title: "The quiet-quote nudge",
+    prompt:
+      "I sent a quote of [$ amount] to [customer name] for [job] three days ago and heard nothing back. Write a polite follow-up email that is easy to say yes to: one reminder of the benefit they cared about, one clear next step, zero pressure.",
+    tip: "Most quotes don't die — they just get forgotten. One kind nudge revives a lot of them.",
+  },
+  {
+    track: "Business",
+    title: "One photo, one post",
+    prompt:
+      "I run a [type of business] in [town]. Write a social media post about this job: [describe the photo or the job in one sentence]. Sound like a proud local owner, not an ad. Add 3–5 hashtags a local customer would actually search.",
+    tip: "One real job photo beats a week of stock content. Post it the day the job finishes.",
+  },
+  {
+    track: "Realtor",
+    title: "Listing words from plain facts",
+    prompt:
+      "Turn these facts about a home into a warm listing description: [beds, baths, size, best features, neighbourhood]. Lead with how it feels to live there, keep every claim factual, and write two versions — one short, one long. Plain words, no hype.",
+    tip: "Always read it yourself before it goes anywhere public — you are the Fair Housing check, not the AI.",
+  },
+  {
+    track: "Realtor",
+    title: "The after-showing follow-up",
+    prompt:
+      "Write a follow-up message to buyers who just toured [address/area] with me. Thank them, name one thing they said they loved, answer this concern they raised: [concern], and suggest one clear next step. Friendly and brief.",
+    tip: "Send it the same evening, while the house is still in their heads.",
+  },
+  {
+    track: "Realtor",
+    title: "Open-house invitation",
+    prompt:
+      "Write an invitation to an open house at [address] on [day, time]. Who it suits, the one feature worth the trip, and easy parking/arrival details: [details]. Three versions: a text, an email, and a social post.",
+    tip: "The 'one feature worth the trip' line does the heavy lifting — pick the true one.",
+  },
+  {
+    track: "Everyday",
+    title: "Brain-dump to to-do list",
+    prompt:
+      "Here is everything on my mind right now: [paste your messy list]. Turn it into a calm to-do list: group it into today / this week / later, make each item one small clear action, and flag the one thing that matters most.",
+    tip: "Do it Sunday night or first thing Monday. Two minutes, whole week sorted.",
+  },
+  {
+    track: "Everyday",
+    title: "Explain it like I'm new",
+    prompt:
+      "Explain this to me like I've never seen it before: [paste anything — a letter, a contract clause, a medical note, an error message]. Plain words, short sentences, then end with: 'So what should I actually do?' answered in three steps or fewer.",
+    tip: "Works on almost anything official and confusing. Understanding first, decisions second.",
+  },
+];
