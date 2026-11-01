@@ -19,9 +19,13 @@ export default function CharlottePage() {
         tag="Charlotte, NC"
         title="Built here, for the people who work here."
         intro="We're not a course shipped in from somewhere else. We're local — Charlotte, Concord, and Cabarrus County — building real things with real neighbours, in a real classroom, every week."
+        theme="local"
+        stamp="Made in Charlotte"
+        note="Charlotte · Concord · Cabarrus"
+        motifVariant={3}
       />
-      <Proof />
-      <CharlottePrograms />
+      <Proof variant="bulletin" />
+      <CharlottePrograms variant="bulletin" />
       <BuiltAndOwn />
       <FinalCta />
     </PageShell>

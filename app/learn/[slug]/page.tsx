@@ -48,12 +48,21 @@ export default async function PostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <PageHero tag="Learn" title={post.title} intro={post.intro} />
-      <section className="pb-16 lg:pb-24">
-        <div className="mx-auto w-full max-w-3xl px-5 sm:px-8">
-          {post.sections.map((section) => (
+      <PageHero
+        tag="Learn"
+        title={post.title}
+        intro={post.intro}
+        theme="notebook"
+        motifVariant={1}
+      />
+      <section className="ruled-paper pb-16 lg:pb-24">
+        <div className="mx-auto w-full max-w-3xl px-5 pt-12 sm:px-8">
+          {post.sections.map((section, index) => (
             <div key={section.heading} className="mt-10 first:mt-0">
               <h2 className="font-display text-3xl font-black text-brand-navy-deep">
+                <span className="mr-2 font-hand text-4xl font-normal text-brand-orange">
+                  {index + 1}.
+                </span>
                 {section.heading}
               </h2>
               {section.paragraphs.map((paragraph) => (

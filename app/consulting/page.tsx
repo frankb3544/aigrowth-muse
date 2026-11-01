@@ -35,9 +35,13 @@ export default function ConsultingPage() {
         tag="AI consulting"
         title="Find the bottleneck. Fix it first."
         intro="Our consulting starts with one honest walk through your business — how customers find you, reach you, buy from you, and come back. We name the single bottleneck costing you the most, then build in the right order. No ten-tool shopping spree, no jargon."
+        theme="blueprint"
+        stamp="Work order"
+        note="Start with the audit — the rest follows."
+        motifVariant={1}
       />
-      <Diagnostic />
-      <Consulting />
+      <Diagnostic variant="spec" />
+      <Consulting variant="blueprint" />
       <Process />
       <Booking />
       <Faq />

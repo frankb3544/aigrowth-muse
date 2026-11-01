@@ -1,7 +1,12 @@
 import { programs } from "@/lib/data";
 import { SectionTag } from "./ui";
 
-export default function CharlottePrograms() {
+export default function CharlottePrograms({
+  variant,
+}: {
+  variant?: "bulletin";
+}) {
+  const bulletin = variant === "bulletin";
   return (
     <section id="charlotte" className="paper-texture py-16 lg:py-24">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
@@ -19,10 +24,10 @@ export default function CharlottePrograms() {
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {programs.map((program) => (
+          {programs.map((program, index) => (
             <article
               key={program.name}
-              className="flex flex-col rounded-3xl border border-brand-navy/12 bg-brand-paper p-7 shadow-sm shadow-brand-navy/5"
+              className={`flex flex-col rounded-3xl border border-brand-navy/12 bg-brand-paper p-7 shadow-sm shadow-brand-navy/5 ${bulletin ? `pin mt-2 ${index % 2 ? "rotate-[0.5deg]" : "rotate-[-0.5deg]"} shadow-md shadow-brand-navy/10` : ""}`}
             >
               <div className="flex items-start justify-between gap-3">
                 <h3 className="font-display text-2xl font-black text-brand-navy-deep">

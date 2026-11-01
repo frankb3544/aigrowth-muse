@@ -49,16 +49,22 @@ const tickets = [
   },
 ];
 
-export default function Consulting() {
+export default function Consulting({ variant }: { variant?: "blueprint" }) {
+  const dark = variant === "blueprint";
   return (
-    <section id="audit" className="paper-texture py-16 lg:py-24">
+    <section
+      id="audit"
+      className={`py-16 lg:py-24 ${dark ? "blueprint text-white" : "paper-texture"}`}
+    >
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <SectionTag>AI consulting</SectionTag>
-          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance text-brand-navy-deep sm:text-5xl">
+          <h2
+            className={`mt-3 font-display text-4xl font-black tracking-tight text-balance sm:text-5xl ${dark ? "text-white" : "text-brand-navy-deep"}`}
+          >
             Have it <span className="marker">built for you</span>
           </h2>
-          <p className="mt-4 text-lg leading-8 text-brand-navy-deep/72">
+          <p className={`mt-4 text-lg leading-8 ${dark ? "text-white/72" : "text-brand-navy-deep/72"}`}>
             Three ways to work with us, in order. Almost everybody starts with
             the audit — it&apos;s how we both find out what&apos;s actually
             worth building.

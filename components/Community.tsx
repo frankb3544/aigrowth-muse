@@ -27,9 +27,13 @@ function CellMark({ included, onDark }: { included: boolean; onDark?: boolean })
   );
 }
 
-export default function Community() {
+export default function Community({ variant }: { variant?: "clubhouse" }) {
+  const club = variant === "clubhouse";
   return (
-    <section id="community" className="paper-texture py-16 lg:py-24">
+    <section
+      id="community"
+      className={`paper-texture py-16 lg:py-24 ${club ? "bg-brand-amber/10" : ""}`}
+    >
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <SectionTag>The community</SectionTag>
@@ -52,7 +56,9 @@ export default function Community() {
 
         <div className="mt-12 grid items-stretch gap-8 lg:grid-cols-2">
           {/* Free card */}
-          <article className="flex flex-col rounded-3xl border-2 border-brand-amber bg-brand-amber/15 p-7 shadow-lg shadow-brand-navy/8 sm:p-9">
+          <article
+            className={`flex flex-col rounded-3xl border-2 border-brand-amber bg-brand-amber/15 p-7 shadow-lg shadow-brand-navy/8 sm:p-9 ${club ? "tape relative rotate-[-0.5deg]" : ""}`}
+          >
             <p className="text-xs font-extrabold tracking-[0.18em] text-brand-orange uppercase">
               Start here · Free
             </p>
@@ -97,7 +103,9 @@ export default function Community() {
           </article>
 
           {/* Basic card */}
-          <article className="tape relative flex flex-col rounded-3xl border-2 border-brand-navy bg-brand-navy p-7 text-white shadow-xl shadow-brand-navy/25 sm:p-9">
+          <article
+            className={`tape relative flex flex-col rounded-3xl border-2 border-brand-navy bg-brand-navy p-7 text-white shadow-xl shadow-brand-navy/25 sm:p-9 ${club ? "rotate-[0.5deg]" : ""}`}
+          >
             <div className="flex items-center justify-between gap-3">
               <p className="text-xs font-extrabold tracking-[0.18em] text-brand-amber uppercase">
                 The step up · Basic
@@ -148,7 +156,9 @@ export default function Community() {
           </article>
         </div>
 
-        <p className="mt-8 font-hand text-3xl text-brand-navy-deep/70">
+        <p
+          className={`mt-8 font-hand text-3xl text-brand-navy-deep/70 ${club ? "inline-block rotate-[-1deg] rounded-lg bg-brand-amber/45 px-5 py-2.5 shadow-sm" : ""}`}
+        >
           Most owners start free — then book the audit when one bottleneck
           won&apos;t wait.
         </p>

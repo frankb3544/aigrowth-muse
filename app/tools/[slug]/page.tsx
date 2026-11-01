@@ -34,10 +34,17 @@ export default async function ToolPage({
   if (!tool) notFound();
 
   const others = toolPages.filter((t) => t.slug !== slug);
+  const toolIndex = toolPages.findIndex((t) => t.slug === slug);
 
   return (
     <PageShell>
-      <PageHero tag="Our tools" title={tool.name} intro={tool.tagline} />
+      <PageHero
+        tag="Our tools"
+        title={tool.name}
+        intro={tool.tagline}
+        theme="bench"
+        motifVariant={toolIndex}
+      />
       <section className="pb-16 lg:pb-24">
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr]">
@@ -77,7 +84,16 @@ export default async function ToolPage({
                 {tool.linkLabel} →
               </a>
             </div>
-            <aside className="h-fit rounded-3xl border-2 border-brand-navy/15 bg-brand-paper/80 p-7 shadow-lg shadow-brand-navy/8">
+            <aside className="h-fit overflow-hidden rounded-3xl border-2 border-brand-navy/15 bg-brand-paper/80 p-7 shadow-lg shadow-brand-navy/8">
+              <div className="-mx-7 -mt-7 mb-6 flex items-center justify-between bg-brand-navy px-7 py-4">
+                <span className="font-hand text-2xl text-white">
+                  From the bench
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="h-2.5 w-14 rounded-full bg-white/30"
+                />
+              </div>
               <SectionTag>Who it&apos;s for</SectionTag>
               <p className="mt-3 leading-7 font-semibold text-brand-navy-deep/85">
                 {tool.whoFor}

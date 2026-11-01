@@ -18,9 +18,12 @@ export default function CommunityPage() {
         tag="The community"
         title="Learn it a little at a time, with people like you."
         intro="The community is where the everyday learning happens: one small tip a day, one tool shown working each week, and a live build session every Thursday. Start free — stay as long as it's useful."
+        theme="clubhouse"
+        note="One small win at a time."
+        motifVariant={2}
       />
-      <Community />
-      <Proof />
+      <Community variant="clubhouse" />
+      <Proof variant="notes" />
       <FinalCta />
     </PageShell>
   );

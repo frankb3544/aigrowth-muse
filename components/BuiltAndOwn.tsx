@@ -1,7 +1,12 @@
 import { properties } from "@/lib/data";
 import { SectionTag } from "./ui";
 
-export default function BuiltAndOwn() {
+export default function BuiltAndOwn({
+  variant,
+}: {
+  variant?: "scrapbook";
+}) {
+  const scrap = variant === "scrapbook";
   return (
     <section id="built-and-own" className="bg-brand-navy-deep py-16 text-white lg:py-24">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
@@ -17,13 +22,17 @@ export default function BuiltAndOwn() {
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          {properties.map((property) => (
+          {properties.map((property, index) => (
             <a
               key={property.name}
               href={property.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col rounded-3xl border border-white/16 bg-white/[0.06] p-8 transition hover:border-brand-amber/60 hover:bg-white/[0.09] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-amber"
+              className={
+                scrap
+                  ? `tape group relative flex flex-col rounded-3xl border-2 border-brand-navy/20 bg-brand-paper p-8 text-brand-navy-deep shadow-xl shadow-black/25 transition hover:border-brand-amber focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-amber ${index % 2 ? "rotate-[0.6deg]" : "rotate-[-0.6deg]"}`
+                  : "group flex flex-col rounded-3xl border border-white/16 bg-white/[0.06] p-8 transition hover:border-brand-amber/60 hover:bg-white/[0.09] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-amber"
+              }
             >
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <h3 className="font-display text-2xl font-black break-all sm:text-3xl">
@@ -35,10 +44,14 @@ export default function BuiltAndOwn() {
                   </span>
                 )}
               </div>
-              <p className="mt-4 flex-1 leading-7.5 text-white/78">
+              <p
+                className={`mt-4 flex-1 leading-7.5 ${scrap ? "text-brand-navy-deep/78" : "text-white/78"}`}
+              >
                 {property.description}
               </p>
-              <span className="mt-6 inline-flex items-center gap-2 font-extrabold text-brand-amber">
+              <span
+                className={`mt-6 inline-flex items-center gap-2 font-extrabold ${scrap ? "text-brand-orange" : "text-brand-amber"}`}
+              >
                 Visit the site{" "}
                 <span
                   aria-hidden="true"

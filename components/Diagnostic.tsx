@@ -4,14 +4,18 @@ import { useState } from "react";
 import { diagnosticStages } from "@/lib/data";
 import { SectionTag } from "./ui";
 
-export default function Diagnostic() {
+export default function Diagnostic({ variant }: { variant?: "spec" }) {
   const [activeId, setActiveId] = useState(diagnosticStages[1].id);
   const active =
     diagnosticStages.find((stage) => stage.id === activeId) ??
     diagnosticStages[0];
+  const spec = variant === "spec";
 
   return (
-    <section id="diagnostic" className="bg-brand-navy-deep py-16 text-white lg:py-24">
+    <section
+      id="diagnostic"
+      className={`py-16 text-white lg:py-24 ${spec ? "blueprint" : "bg-brand-navy-deep"}`}
+    >
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <SectionTag>Find your bottleneck</SectionTag>
@@ -61,8 +65,13 @@ export default function Diagnostic() {
 
         <div
           role="tabpanel"
-          className="mt-6 grid gap-8 rounded-3xl border border-white/14 bg-white/[0.07] p-7 sm:p-9 lg:grid-cols-2"
+          className={`relative mt-6 grid gap-8 rounded-3xl border border-white/14 bg-white/[0.07] p-7 sm:p-9 lg:grid-cols-2 ${spec ? "border-dashed" : ""}`}
         >
+          {spec && (
+            <span className="absolute -top-3 left-6 bg-brand-navy-deep px-2 text-[11px] font-extrabold tracking-[0.22em] text-brand-sky uppercase">
+              Spec sheet · the RACE walk
+            </span>
+          )}
           <div>
             <p className="text-xs font-extrabold tracking-[0.18em] text-brand-sky uppercase">
               If this sounds familiar

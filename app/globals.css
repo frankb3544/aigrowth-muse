@@ -84,6 +84,49 @@
   }
 }
 
+  /* Blueprint grid on deep navy — the consulting "work order" treatment */
+  .blueprint {
+    background-color: #0d1838;
+    background-image:
+      linear-gradient(rgba(147, 197, 253, 0.13) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(147, 197, 253, 0.13) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  /* Ruled notebook paper — the learn pages' treatment */
+  .ruled-paper {
+    background-color: #fff7e8;
+    background-image: linear-gradient(
+      rgba(147, 197, 253, 0.4) 1px,
+      transparent 1px
+    );
+    background-size: 100% 32px;
+  }
+
+  /* Pushpin dot for bulletin-board cards */
+  .pin {
+    position: relative;
+  }
+
+  .pin::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    transform: translateX(-50%);
+    border-radius: 9999px;
+    background: radial-gradient(
+      circle at 35% 30%,
+      #fbbf24 0%,
+      #f97316 62%,
+      #c2540a 100%
+    );
+    box-shadow: 0 3px 5px rgba(13, 24, 56, 0.35);
+    z-index: 1;
+  }
+
 @layer base {
   * {
     @apply border-brand-navy/10;

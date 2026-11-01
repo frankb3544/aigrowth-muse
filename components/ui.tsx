@@ -22,39 +22,188 @@ export function PageShell({ children }: { children: ReactNode }) {
   );
 }
 
-/** Hero block for subpages: section tag, big display headline, plain intro. */
+export type HeroTheme =
+  | "plain"
+  | "blueprint"
+  | "clubhouse"
+  | "bench"
+  | "local"
+  | "notebook"
+  | "letter";
+
+/**
+ * One hero family for every subpage: same skeleton (tag, display headline,
+ * plain intro, pixel motif), dressed per page inside the brand palette.
+ * `note` renders as a handwritten Caveat line; `stamp` as a rotated stamp chip.
+ */
 export function PageHero({
   tag,
   title,
   intro,
+  theme = "plain",
+  note,
+  stamp,
+  motifVariant = 0,
 }: {
   tag: string;
   title: string;
   intro: string;
+  theme?: HeroTheme;
+  note?: string;
+  stamp?: string;
+  motifVariant?: number;
 }) {
+  const dark = theme === "blueprint" || theme === "bench";
+
+  const sectionClass =
+    theme === "blueprint"
+      ? "blueprint text-white"
+      : theme === "bench"
+        ? "bg-brand-navy text-white"
+        : theme === "clubhouse"
+          ? "bg-[linear-gradient(155deg,rgba(251,191,36,0.38),rgba(255,247,232,0)_58%)]"
+          : theme === "local"
+            ? "bg-brand-sky/30"
+            : theme === "notebook"
+              ? "ruled-paper"
+              : theme === "letter"
+                ? "paper-texture"
+                : "";
+
   return (
-    <section className="relative overflow-hidden">
-      <div className="mx-auto w-full max-w-7xl px-5 pt-14 pb-10 sm:px-8 sm:pt-20">
-        <SectionTag>{tag}</SectionTag>
+    <section className={`relative overflow-hidden ${sectionClass}`}>
+      {theme === "notebook" && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-y-0 left-6 w-px bg-brand-orange/40 sm:left-10"
+        />
+      )}
+      <div className="relative mx-auto w-full max-w-7xl px-5 pt-14 pb-12 sm:px-8 sm:pt-20">
+        <PixelMotif
+          variant={motifVariant}
+          className="absolute top-10 right-6 hidden h-12 w-20 sm:block lg:right-10"
+        />
+        <div className="flex flex-wrap items-center gap-4">
+          <SectionTag>{tag}</SectionTag>
+          {stamp && (
+            <span
+              className={`inline-block rotate-2 rounded-md border-2 px-3 py-1 font-hand text-xl leading-none ${
+                dark
+                  ? "border-brand-amber text-brand-amber"
+                  : "border-brand-orange text-brand-orange"
+              }`}
+            >
+              {stamp}
+            </span>
+          )}
+        </div>
         <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[1.05] font-semibold text-balance sm:text-6xl">
           {title}
         </h1>
-        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-brand-navy-deep/75">
+        <p
+          className={`mt-5 max-w-2xl text-lg leading-relaxed ${
+            dark ? "text-white/75" : "text-brand-navy-deep/75"
+          }`}
+        >
           {intro}
         </p>
+        {note && (
+          <p
+            className={`mt-5 font-hand text-3xl ${
+              dark ? "text-brand-amber" : "text-brand-navy-deep/75"
+            }`}
+          >
+            {note}
+          </p>
+        )}
+        {theme === "letter" && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src="/brand/icon-square-white-on-navy-512.png"
+            alt=""
+            aria-hidden="true"
+            className="absolute right-6 bottom-8 hidden h-16 w-16 rotate-3 rounded-2xl shadow-lg shadow-brand-navy/25 ring-2 ring-brand-amber sm:block lg:right-10"
+          />
+        )}
+        {theme === "bench" && (
+          <div
+            aria-hidden="true"
+            className="absolute right-0 bottom-0 left-0 h-2 bg-brand-orange"
+          />
+        )}
       </div>
     </section>
   );
 }
 
-export function PixelMotif({ className = "" }: { className?: string }) {
+const MOTIFS: { top: number; left: number; size: number; color: string }[][] = [
+  [
+    { top: 0, left: 0, size: 8, color: "bg-brand-sky" },
+    { top: 14, left: 22, size: 12, color: "bg-brand-amber" },
+    { top: 4, left: 48, size: 8, color: "bg-brand-orange" },
+    { top: 30, left: 8, size: 10, color: "bg-brand-sky" },
+    { top: 38, left: 40, size: 8, color: "bg-brand-amber" },
+  ],
+  [
+    { top: 6, left: 44, size: 8, color: "bg-brand-sky" },
+    { top: 0, left: 10, size: 10, color: "bg-brand-orange" },
+    { top: 22, left: 30, size: 12, color: "bg-brand-amber" },
+    { top: 36, left: 2, size: 8, color: "bg-brand-amber" },
+    { top: 40, left: 56, size: 8, color: "bg-brand-sky" },
+  ],
+  [
+    { top: 2, left: 26, size: 12, color: "bg-brand-sky" },
+    { top: 18, left: 2, size: 8, color: "bg-brand-amber" },
+    { top: 26, left: 52, size: 10, color: "bg-brand-orange" },
+    { top: 40, left: 22, size: 8, color: "bg-brand-orange" },
+    { top: 12, left: 62, size: 8, color: "bg-brand-amber" },
+  ],
+  [
+    { top: 0, left: 56, size: 10, color: "bg-brand-amber" },
+    { top: 14, left: 6, size: 8, color: "bg-brand-sky" },
+    { top: 24, left: 38, size: 12, color: "bg-brand-orange" },
+    { top: 42, left: 12, size: 8, color: "bg-brand-sky" },
+    { top: 34, left: 64, size: 8, color: "bg-brand-amber" },
+  ],
+  [
+    { top: 8, left: 2, size: 10, color: "bg-brand-orange" },
+    { top: 2, left: 34, size: 8, color: "bg-brand-amber" },
+    { top: 20, left: 58, size: 12, color: "bg-brand-sky" },
+    { top: 38, left: 30, size: 8, color: "bg-brand-sky" },
+    { top: 44, left: 62, size: 8, color: "bg-brand-orange" },
+  ],
+  [
+    { top: 4, left: 40, size: 12, color: "bg-brand-amber" },
+    { top: 16, left: 64, size: 8, color: "bg-brand-sky" },
+    { top: 28, left: 8, size: 10, color: "bg-brand-sky" },
+    { top: 40, left: 44, size: 8, color: "bg-brand-orange" },
+    { top: 0, left: 4, size: 8, color: "bg-brand-orange" },
+  ],
+];
+
+/** The logo's rising pixel cubes — a different arrangement per variant. */
+export function PixelMotif({
+  className = "",
+  variant = 0,
+}: {
+  className?: string;
+  variant?: number;
+}) {
+  const spans = MOTIFS[Math.abs(variant) % MOTIFS.length];
   return (
     <div aria-hidden="true" className={`pointer-events-none ${className}`}>
-      <span className="absolute h-2 w-2 bg-brand-sky" style={{ top: 0, left: 0 }} />
-      <span className="absolute h-3 w-3 bg-brand-amber" style={{ top: 14, left: 22 }} />
-      <span className="absolute h-2 w-2 bg-brand-orange" style={{ top: 4, left: 48 }} />
-      <span className="absolute h-2.5 w-2.5 bg-brand-sky" style={{ top: 30, left: 8 }} />
-      <span className="absolute h-2 w-2 bg-brand-amber" style={{ top: 38, left: 40 }} />
+      {spans.map((span, index) => (
+        <span
+          key={index}
+          className={`absolute ${span.color}`}
+          style={{
+            top: span.top,
+            left: span.left,
+            width: span.size,
+            height: span.size,
+          }}
+        />
+      ))}
     </div>
   );
 }
