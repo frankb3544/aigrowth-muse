@@ -443,6 +443,39 @@ export const posts: Post[] = [
     closing:
       "The community side lives on Skool, where the daily tips and weekly tool videos land between Thursdays. Join free, look around, and come build with us.",
   },
+  {
+    slug: "the-follow-up-gap",
+    title: "The follow-up gap: where good businesses quietly lose customers",
+    description:
+      "The pattern our audit is built to find: the work is good, but follow-up lives in somebody's memory — and busy weeks erase it. Here's the gap, the five moments that matter, and the small system that closes it.",
+    intro:
+      "Ask almost any owner where business leaks and they'll point at marketing. Walk the day-to-day, though, and the leak is usually quieter: good work surrounded by small gaps — the call nobody returned, the quote nobody nudged, the happy customer nobody asked for a review. Nobody decided to skip those things. They just lived in somebody's memory — and memory is the first thing a busy week spends.",
+    sections: [
+      {
+        heading: "It's not a people problem",
+        paragraphs: [
+          "Follow-up fails in almost every small business for the same boring reason: it isn't a system, it's an intention. The owner means to call back. The tech means to send the text. Then three jobs land at once, and the intentions are what get dropped — the actual work always wins the day.",
+          "Customers almost never complain about it. They don't leave a one-star review saying 'nobody followed up.' They just quietly book somebody else next time, and you never learn their name. That's what makes the gap expensive: it's invisible on every report you look at.",
+        ],
+      },
+      {
+        heading: "The five moments that matter",
+        paragraphs: [
+          "Whatever the trade, the same five moments decide whether follow-up happens. One: a missed call — the save text that should go out within minutes. Two: a quote sent — the gentle nudge three days later, when it's been forgotten, not rejected. Three: a job finished — the thank-you and the review ask, while the good feeling is fresh.",
+          "Four: a review posted — answered or ignored, it is a public conversation about your business, and only one side is talking if you don't reply. Five: a past customer gone quiet — the friendly check-in months later that brings back work you'd never have chased. None of these need talent. All of them need a trigger.",
+        ],
+      },
+      {
+        heading: "A system, not a resolution",
+        paragraphs: [
+          "The fix is never 'try harder.' It's three small parts: a trigger (the missed call itself starts the clock), a template (the words are already written, in your voice, so sending takes ten seconds), and a timer (if it hasn't happened by a set time, it surfaces again instead of vanishing). Small and boring beats big and occasional, every week of the year.",
+          "This is also exactly where AI earns its keep without taking the wheel: it drafts the text, the nudge, the reply — and a person still reads anything public before it ships. The system remembers; the human decides. That's the whole design.",
+        ],
+      },
+    ],
+    closing:
+      "If you want a feel for it before any audit: our free starter prompt pack includes the missed-call save, the review reply, and the quiet-quote nudge — three of the five moments, ready to copy and paste. And if you'd like us to map your version of the gap, that's precisely what the audit is for.",
+  },
 ];
 
 /* ------------------------------------- FAQ ------------------------------------- */

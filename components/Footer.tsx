@@ -7,6 +7,7 @@ const footerLinks = [
   { label: "Our Tools", href: "/tools" },
   { label: "Charlotte", href: "/charlotte" },
   { label: "Learn", href: "/learn" },
+  { label: "Free prompt pack", href: "/prompt-pack" },
   { label: "About", href: "/about" },
   { label: "Privacy", href: "/privacy" },
   { label: "Terms", href: "/terms" },
