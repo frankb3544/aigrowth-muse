@@ -18,7 +18,8 @@ const sections = [
   {
     heading: "What this website collects",
     paragraphs: [
-      "This website has no accounts, no sign-up forms, and no checkout of its own. We do not sell personal information, and this site does not set advertising cookies.",
+      "This website has no accounts and no checkout of its own, and it does not set advertising cookies. It has exactly one optional form: on the prompt-pack page you can leave an email address to have the free starter prompt pack sent to you. That is the only information this site itself collects, and only if you choose to give it.",
+      "If you use that form, we use your email to send the pack and to let you know when new packs are published. We never sell personal information, and you can ask us to delete your email at any time (see Your choices). Email delivery is handled by Resend, our email provider.",
       "Like most websites, our hosting provider keeps basic technical logs (such as page requests and browser type) to keep the site secure and running. We use those logs only to operate and improve the site.",
     ],
   },

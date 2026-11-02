@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import FinalCta from "@/components/FinalCta";
+import PromptPackForm from "@/components/PromptPackForm";
 import { PageHero, PageShell } from "@/components/ui";
 import { promptPack, type PromptPackItem } from "@/lib/data";
 import { SKOOL_URL } from "@/lib/site";
@@ -32,6 +33,17 @@ export default function PromptPackPage() {
       />
       <section className="ruled-paper pb-16 lg:pb-24">
         <div className="mx-auto w-full max-w-7xl px-5 pt-14 sm:px-8">
+          <div className="mb-14 rounded-3xl border-2 border-brand-navy bg-brand-paper p-7 shadow-lg shadow-brand-navy/10 sm:p-9">
+            <h2 className="font-display text-3xl font-black text-balance text-brand-navy-deep">
+              Want the pack in your inbox?
+            </h2>
+            <p className="mt-3 mb-6 max-w-2xl leading-7 text-brand-navy-deep/75">
+              Optional, always. Leave an email and we&apos;ll send the whole
+              pack as one tidy message you can keep and forward — or just
+              read it all below. Same pack, no strings either way.
+            </p>
+            <PromptPackForm />
+          </div>
           {TRACK_ORDER.map((track) => (
             <div key={track} className="mt-14 first:mt-0">
               <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
