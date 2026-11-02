@@ -8,7 +8,7 @@ import { PageHero, PageShell } from "@/components/ui";
 export const metadata: Metadata = {
   title: "The Community — free to start, practical every day",
   description:
-    "The Build AI From Here community on Skool: a daily AI tip in plain words, a weekly tool video, starter prompt packs, and a monthly open Q&A — free. Basic adds the full prompt library, courses, and member pricing for $10 a month.",
+    "The Build AI From Here community on Skool: a daily AI tip in plain words, a weekly tool video, starter prompt packs, and a monthly open Q&A — free. Premium adds the full prompt library, courses, and member pricing for $10 a month.",
   alternates: { canonical: "/community" },
 };
 

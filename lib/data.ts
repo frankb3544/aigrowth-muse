@@ -219,20 +219,20 @@ export const programs: Program[] = [
 export type ComparisonRow = {
   label: string;
   free: boolean;
-  basic: boolean;
+  premium: boolean;
 };
 
 export const comparisonRows: ComparisonRow[] = [
-  { label: "Daily AI tip, in plain words", free: true, basic: true },
-  { label: "Weekly tool video — one tool, shown working", free: true, basic: true },
-  { label: "Monthly open Q&A — ask anything", free: true, basic: true },
-  { label: "Starter prompt packs for your path", free: true, basic: true },
-  { label: "Full prompt library — every pack, every track", free: false, basic: true },
-  { label: "A prompt pack personalised to your path", free: false, basic: true },
-  { label: "Mobile App Builder course — build and launch an app", free: false, basic: true },
-  { label: "Full course library, new courses included", free: false, basic: true },
-  { label: "Book Briefs — 2 new AI book summaries a month", free: false, basic: true },
-  { label: "Member pricing on audits and tools", free: false, basic: true },
+  { label: "Daily AI tip, in plain words", free: true, premium: true },
+  { label: "Weekly tool video — one tool, shown working", free: true, premium: true },
+  { label: "Monthly open Q&A — ask anything", free: true, premium: true },
+  { label: "Starter prompt packs for your path", free: true, premium: true },
+  { label: "Full prompt library — every pack, every track", free: false, premium: true },
+  { label: "A prompt pack personalised to your path", free: false, premium: true },
+  { label: "Mobile App Builder course — build and launch an app", free: false, premium: true },
+  { label: "Full course library, new courses included", free: false, premium: true },
+  { label: "Book Briefs — 2 new AI book summaries a month", free: false, premium: true },
+  { label: "Member pricing on audits and tools", free: false, premium: true },
 ];
 
 /* ------------------------------ Tool detail pages ------------------------------ */
@@ -614,7 +614,7 @@ export const faqs: Faq[] = [
       "Yes. The free group on Skool costs nothing and asks for no card: a daily AI tip, a weekly tool video, starter prompt packs, and a monthly open Q&A. Join, look around, and stay as long as it's useful.",
   },
   {
-    question: "What does Basic add for $10 a month?",
+    question: "What does Premium add for $10 a month?",
     answer:
       "Everything in Free, plus the full prompt library, a prompt pack personalised to your path, the Mobile App Builder course, the full course library (new courses included), Book Briefs twice a month, and member pricing on audits and tools.",
   },

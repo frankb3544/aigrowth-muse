@@ -43,7 +43,7 @@ export default function Community({ variant }: { variant?: "clubhouse" }) {
           <p className="mt-4 text-lg leading-8 text-brand-navy-deep/72">
             The Build AI From Here community lives on Skool. Start free, get
             one simple tip a day, try one small thing at a time. When
-            you&apos;re ready for more, Basic is right there — here&apos;s
+            you&apos;re ready for more, Premium is right there — here&apos;s
             exactly what each one includes, side by side.
           </p>
           <p className="mt-3 text-base font-bold text-brand-navy-deep/70">
@@ -102,13 +102,13 @@ export default function Community({ variant }: { variant?: "clubhouse" }) {
             </a>
           </article>
 
-          {/* Basic card */}
+          {/* Premium card */}
           <article
             className={`tape relative flex flex-col rounded-3xl border-2 border-brand-navy bg-brand-navy p-7 text-white shadow-xl shadow-brand-navy/25 sm:p-9 ${club ? "rotate-[0.5deg]" : ""}`}
           >
             <div className="flex items-center justify-between gap-3">
               <p className="text-xs font-extrabold tracking-[0.18em] text-brand-amber uppercase">
-                The step up · Basic
+                The step up · Premium
               </p>
               <span className="rounded-full bg-brand-amber px-3 py-1 text-xs font-extrabold text-brand-navy-deep">
                 Most popular
@@ -127,7 +127,7 @@ export default function Community({ variant }: { variant?: "clubhouse" }) {
                   key={row.label}
                   className="flex min-h-12 items-center gap-3 border-b border-dashed border-white/18 py-2.5 last:border-0"
                 >
-                  <CellMark included={row.basic} onDark />
+                  <CellMark included={row.premium} onDark />
                   <span
                     className={`leading-6 ${
                       row.free
@@ -138,7 +138,7 @@ export default function Community({ variant }: { variant?: "clubhouse" }) {
                     {row.label}
                     {!row.free && (
                       <span className="ml-2 rounded-full bg-brand-orange px-2 py-0.5 align-middle text-[11px] font-extrabold text-white">
-                        Basic adds this
+                        Premium adds this
                       </span>
                     )}
                   </span>
@@ -151,7 +151,7 @@ export default function Community({ variant }: { variant?: "clubhouse" }) {
               rel="noopener noreferrer"
               className="mt-8 rounded-full bg-brand-orange px-6 py-3.5 text-center text-base font-extrabold text-white shadow-md shadow-black/25 transition hover:bg-orange-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-amber"
             >
-              Join Basic on Skool
+              Join Premium on Skool
             </a>
           </article>
         </div>

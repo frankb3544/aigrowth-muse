@@ -94,7 +94,7 @@ export default function PromptPackPage() {
               </h2>
               <p className="mt-3 leading-7 text-white/75">
                 The free group gets starter packs like this one plus a tip a
-                day. Basic members get the full prompt library — including a
+                day. Premium members get the full prompt library — including a
                 pack personalised to their path.
               </p>
             </div>
