@@ -19,10 +19,12 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // Close the menu whenever the route changes.
-  useEffect(() => {
+  // Close the menu whenever the route changes (adjust-during-render pattern).
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
     setOpen(false);
-  }, [pathname]);
+  }
 
   // Close on Escape.
   useEffect(() => {
