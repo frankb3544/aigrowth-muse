@@ -53,3 +53,26 @@ export const SITE_NAME = "Build AI From Here";
 
 export const SITE_TAGLINE =
   "No coding. No overwhelm. Just practical AI, one small win at a time.";
+
+/**
+ * Public contact details. These ship EMPTY on purpose: while a value is
+ * empty, every element that would show it (the mobile bar's Call button,
+ * the contact band's chips, the footer social icons) simply hides.
+ * Fill a value in and it lights up everywhere at once — no other code
+ * changes needed.
+ */
+export const CONTACT_PHONE = ""; // display form, e.g. "(704) 555-0147"
+export const CONTACT_EMAIL = ""; // e.g. "hello@buildaifromhere.com"
+
+export const SOCIAL_LINKS = {
+  facebook: "",
+  instagram: "",
+  linkedin: "",
+  youtube: "",
+};
+
+export const hasPhone = CONTACT_PHONE.length > 0;
+export const hasEmail = CONTACT_EMAIL.length > 0;
+
+/** tel: href derived from the display number. */
+export const phoneHref = `tel:${CONTACT_PHONE.replace(/[^+\d]/g, "")}`;

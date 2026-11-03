@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import BuiltAndOwn from "@/components/BuiltAndOwn";
 import FinalCta from "@/components/FinalCta";
+import ContactBand from "@/components/ContactBand";
 import FounderLetter from "@/components/FounderLetter";
 import { PageHero, PageShell, SectionTag } from "@/components/ui";
 
@@ -63,6 +64,7 @@ export default function AboutPage() {
       </section>
       <FounderLetter />
       <BuiltAndOwn variant="scrapbook" />
+      <ContactBand />
       <FinalCta />
     </PageShell>
   );

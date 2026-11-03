@@ -3,6 +3,7 @@ import Booking from "@/components/Booking";
 import Consulting from "@/components/Consulting";
 import Diagnostic from "@/components/Diagnostic";
 import Faq from "@/components/Faq";
+import ContactBand from "@/components/ContactBand";
 import Process from "@/components/Process";
 import { PageHero, PageShell } from "@/components/ui";
 import { faqs } from "@/lib/data";
@@ -45,6 +46,7 @@ export default function ConsultingPage() {
       <Process />
       <Booking />
       <Faq />
+      <ContactBand />
     </PageShell>
   );
 }

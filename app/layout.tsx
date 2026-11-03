@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Caveat, Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
+import MobileActionBar from "@/components/MobileActionBar";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -74,6 +75,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           }}
         />
         {children}
+        <MobileActionBar />
       </body>
     </html>
   );

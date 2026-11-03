@@ -12,6 +12,7 @@ import BuiltAndOwn from "@/components/BuiltAndOwn";
 import CharlottePrograms from "@/components/CharlottePrograms";
 import FounderLetter from "@/components/FounderLetter";
 import Faq from "@/components/Faq";
+import ContactBand from "@/components/ContactBand";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 
@@ -33,6 +34,7 @@ export default function Home() {
         <CharlottePrograms />
         <FounderLetter />
         <Faq />
+        <ContactBand />
         <FinalCta />
       </main>
       <Footer />
