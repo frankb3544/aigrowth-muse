@@ -19,7 +19,7 @@ export default function Diagnostic({ variant }: { variant?: "spec" }) {
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <SectionTag>Find your bottleneck</SectionTag>
-          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
             Where is work <span className="marker">slipping through</span>?
           </h2>
           <p className="mt-4 text-lg leading-8 text-white/72">

@@ -1,4 +1,5 @@
 import { SectionTag } from "./ui";
+import ProofStats from "./ProofStats";
 
 export default function Proof({
   variant,
@@ -8,22 +9,41 @@ export default function Proof({
   const notes = variant === "notes";
   const bulletin = variant === "bulletin";
 
+  // Homepage: the animated proof dashboard on the navy band.
+  if (!notes && !bulletin) {
+    return (
+      <section id="proof" className="bg-brand-navy-deep py-16 text-white lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+          <div className="max-w-3xl">
+            <SectionTag>Proof — owner-reported</SectionTag>
+            <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
+              What&apos;s actually <span className="marker">moving</span>
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-white/72">
+              The numbers below are our own tools&apos; usage, reported by
+              the people who run them — plus the room where we build in
+              public every week.
+            </p>
+          </div>
+
+          <ProofStats />
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section
       id="proof"
       className={`py-16 lg:py-24 ${
-        bulletin
-          ? "bg-brand-navy-deep text-white"
-          : notes
-            ? "paper-texture"
-            : "bg-brand-sky/25"
+        bulletin ? "bg-brand-navy-deep text-white" : "paper-texture"
       }`}
     >
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <SectionTag>Proof, in person</SectionTag>
           <h2
-            className={`mt-3 font-display text-4xl font-black tracking-tight text-balance sm:text-5xl ${bulletin ? "text-white" : "text-brand-navy-deep"}`}
+            className={`mt-3 font-display text-4xl font-black tracking-tight text-balance sm:text-5xl lg:text-6xl ${bulletin ? "text-white" : "text-brand-navy-deep"}`}
           >
             Don&apos;t take our word for it.{" "}
             <span className="marker">Watch it happen.</span>
@@ -42,9 +62,7 @@ export default function Proof({
             className={`rotate-[-0.5deg] rounded-3xl border border-brand-navy/12 p-8 shadow-lg shadow-brand-navy/10 ${
               bulletin
                 ? "pin bg-brand-paper"
-                : notes
-                  ? "tape bg-brand-amber/30"
-                  : "tape bg-brand-paper"
+                : "tape bg-brand-amber/30"
             }`}
           >
             <p className="text-xs font-extrabold tracking-[0.18em] text-brand-orange uppercase">

@@ -16,7 +16,7 @@ export default function Process() {
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <SectionTag>How it works</SectionTag>
-          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance text-brand-navy-deep sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance text-brand-navy-deep sm:text-5xl lg:text-6xl">
             One bottleneck at a time, <span className="marker">six simple steps</span>
           </h2>
           <p className="mt-4 text-lg leading-8 text-brand-navy-deep/72">

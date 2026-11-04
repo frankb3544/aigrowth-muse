@@ -3,7 +3,7 @@ import { SectionTag } from "./ui";
 
 function FeaturedCard({ tool }: { tool: Tool }) {
   return (
-    <article className="flex flex-col rounded-3xl border-2 border-brand-navy bg-brand-paper p-8 shadow-lg shadow-brand-navy/12">
+    <article className="card-lift flex flex-col rounded-3xl border-2 border-brand-navy bg-brand-paper p-8 shadow-lg shadow-brand-navy/12">
       <div className="flex items-center justify-between gap-3">
         <h3 className="font-display text-3xl font-black text-brand-navy-deep">
           {tool.name}
@@ -38,7 +38,7 @@ export default function Tools() {
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <SectionTag>Our tools</SectionTag>
-          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance text-brand-navy-deep sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance text-brand-navy-deep sm:text-5xl lg:text-6xl">
             Tools we built, <span className="marker">because we needed them</span>
           </h2>
           <p className="mt-4 text-lg leading-8 text-brand-navy-deep/72">

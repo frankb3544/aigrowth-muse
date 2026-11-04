@@ -37,7 +37,7 @@ export default function Community({ variant }: { variant?: "clubhouse" }) {
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <SectionTag>The community</SectionTag>
-          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance text-brand-navy-deep sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance text-brand-navy-deep sm:text-5xl lg:text-6xl">
             Not ready for an audit? <span className="marker">Start free.</span>
           </h2>
           <p className="mt-4 text-lg leading-8 text-brand-navy-deep/72">
@@ -57,7 +57,7 @@ export default function Community({ variant }: { variant?: "clubhouse" }) {
         <div className="mt-12 grid items-stretch gap-8 lg:grid-cols-2">
           {/* Free card */}
           <article
-            className={`flex flex-col rounded-3xl border-2 border-brand-amber bg-brand-amber/15 p-7 shadow-lg shadow-brand-navy/8 sm:p-9 ${club ? "tape relative rotate-[-0.5deg]" : ""}`}
+            className={`flex flex-col rounded-3xl border-2 border-brand-amber bg-brand-amber/15 p-7 shadow-lg shadow-brand-navy/8 sm:p-9 ${club ? "tape relative rotate-[-0.5deg]" : "card-lift"}`}
           >
             <p className="text-xs font-extrabold tracking-[0.18em] text-brand-orange uppercase">
               Start here · Free
@@ -104,7 +104,7 @@ export default function Community({ variant }: { variant?: "clubhouse" }) {
 
           {/* Premium card */}
           <article
-            className={`tape relative flex flex-col rounded-3xl border-2 border-brand-navy bg-brand-navy p-7 text-white shadow-xl shadow-brand-navy/25 sm:p-9 ${club ? "rotate-[0.5deg]" : ""}`}
+            className={`tape relative flex flex-col rounded-3xl border-2 border-brand-navy bg-brand-navy p-7 text-white shadow-xl shadow-brand-navy/25 sm:p-9 ${club ? "rotate-[0.5deg]" : "card-lift"}`}
           >
             <div className="flex items-center justify-between gap-3">
               <p className="text-xs font-extrabold tracking-[0.18em] text-brand-amber uppercase">

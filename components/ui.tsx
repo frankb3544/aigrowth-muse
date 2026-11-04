@@ -78,7 +78,7 @@ export function PageHero({
           className="absolute inset-y-0 left-6 w-px bg-brand-orange/40 sm:left-10"
         />
       )}
-      <div className="relative mx-auto w-full max-w-7xl px-5 pt-14 pb-12 sm:px-8 sm:pt-20">
+      <div className="relative mx-auto w-full max-w-7xl px-5 pt-16 pb-14 sm:px-8 sm:pt-24 sm:pb-16">
         <PixelMotif
           variant={motifVariant}
           className="absolute top-10 right-6 hidden h-12 w-20 sm:block lg:right-10"
@@ -97,7 +97,7 @@ export function PageHero({
             </span>
           )}
         </div>
-        <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[1.05] font-semibold text-balance sm:text-6xl">
+        <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[1.05] font-semibold text-balance sm:text-6xl lg:text-7xl">
           {title}
         </h1>
         <p

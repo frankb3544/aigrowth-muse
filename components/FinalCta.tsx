@@ -7,7 +7,7 @@ export default function FinalCta() {
       <PixelMotif className="absolute top-10 left-[6%] h-12 w-16" />
       <PixelMotif className="absolute right-[6%] bottom-10 h-12 w-16" />
       <div className="relative mx-auto w-full max-w-4xl px-5 text-center sm:px-8">
-        <h2 className="font-display text-4xl font-black tracking-tight text-balance sm:text-5xl">
+        <h2 className="font-display text-4xl font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
           Your bottleneck won&apos;t fix itself.
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/75">

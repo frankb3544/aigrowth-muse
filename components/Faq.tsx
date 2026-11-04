@@ -7,7 +7,7 @@ export default function Faq() {
       <div className="mx-auto w-full max-w-4xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <SectionTag>Questions</SectionTag>
-          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance text-brand-navy-deep sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance text-brand-navy-deep sm:text-5xl lg:text-6xl">
             Asked all the time
           </h2>
         </div>

@@ -57,7 +57,7 @@ export default function LearnPage() {
                   {trackPosts.map((post) => (
                     <article
                       key={post.slug}
-                      className="flex flex-col rounded-3xl border-2 border-brand-navy/15 bg-brand-paper p-7 shadow-lg shadow-brand-navy/8"
+                      className="card-lift flex flex-col rounded-3xl border-2 border-brand-navy/15 bg-brand-paper p-7 shadow-lg shadow-brand-navy/8"
                     >
                       <div className="flex items-center justify-between">
                         <span aria-hidden="true" className="flex gap-2">

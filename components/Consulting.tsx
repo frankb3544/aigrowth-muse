@@ -60,7 +60,7 @@ export default function Consulting({ variant }: { variant?: "blueprint" }) {
         <div className="max-w-3xl">
           <SectionTag>AI consulting</SectionTag>
           <h2
-            className={`mt-3 font-display text-4xl font-black tracking-tight text-balance sm:text-5xl ${dark ? "text-white" : "text-brand-navy-deep"}`}
+            className={`mt-3 font-display text-4xl font-black tracking-tight text-balance sm:text-5xl lg:text-6xl ${dark ? "text-white" : "text-brand-navy-deep"}`}
           >
             Have it <span className="marker">built for you</span>
           </h2>

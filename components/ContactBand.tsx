@@ -19,7 +19,7 @@ export default function ContactBand() {
     <section aria-label="Contact" className="relative overflow-hidden bg-brand-navy-deep text-white">
       <PixelMotif className="absolute top-8 right-[6%] hidden h-12 w-16 opacity-70 sm:block" />
       <div className="relative mx-auto w-full max-w-7xl px-5 py-14 sm:px-8">
-        <h2 className="font-display text-4xl font-black tracking-tight text-balance sm:text-5xl">
+        <h2 className="font-display text-4xl font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
           Talk to a <span className="text-brand-amber">human</span>
         </h2>
         <p className="mt-4 max-w-2xl text-lg leading-8 font-medium text-white/80">

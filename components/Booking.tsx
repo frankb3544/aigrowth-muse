@@ -13,7 +13,7 @@ export default function Booking() {
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <SectionTag>Book your audit</SectionTag>
-          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
             Book first. <span className="marker">Pay after</span> your audit is
             scheduled.
           </h2>

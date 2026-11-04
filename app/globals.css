@@ -181,3 +181,64 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-rise, .hero-pop, .hero-float, .hero-caret { animation: none; }
 }
+
+/* Tools marquee (homepage, under the hero): infinite loop, pauses on hover */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee-scroll 38s linear infinite;
+  will-change: transform;
+}
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* Gentle pulse for the Thursday cell in the proof week strip */
+@keyframes pulse-soft {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.45); }
+  50% { box-shadow: 0 0 0 7px rgba(249, 115, 22, 0); }
+}
+.pulse-soft { animation: pulse-soft 2.4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .pulse-soft { animation: none; }
+}
+
+/* Scroll reveal: sections rise in once when they enter the viewport */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Card hover lift, the mockup's card treatment */
+.card-lift {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-lift { transition: none; }
+  .card-lift:hover { transform: none; }
+}
