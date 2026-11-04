@@ -50,6 +50,13 @@ export default function ContactBand() {
           >
             Book a call
           </a>
+          <button
+            type="button"
+            data-contact-open
+            className="rounded-full border-2 border-white/30 px-6 py-3 font-extrabold text-white transition hover:border-brand-amber hover:text-brand-amber"
+          >
+            Send a message
+          </button>
           <a
             href={SKOOL_URL}
             className="rounded-full border-2 border-white/30 px-6 py-3 font-extrabold text-white transition hover:border-brand-amber hover:text-brand-amber"

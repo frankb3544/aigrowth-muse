@@ -61,8 +61,8 @@ export const SITE_TAGLINE =
  * Fill a value in and it lights up everywhere at once — no other code
  * changes needed.
  */
-export const CONTACT_PHONE = ""; // display form, e.g. "(704) 555-0147"
-export const CONTACT_EMAIL = ""; // e.g. "hello@buildaifromhere.com"
+export const CONTACT_PHONE = "(704) 900-1645";
+export const CONTACT_EMAIL = "build@buildaifromhere.com";
 
 export const SOCIAL_LINKS = {
   facebook: "",

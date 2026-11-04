@@ -101,6 +101,13 @@ export default function Footer() {
           >
             Join the community
           </a>
+          <button
+            type="button"
+            data-contact-open
+            className="text-sm font-bold text-white/70 transition hover:text-brand-amber"
+          >
+            Contact us
+          </button>
         </nav>
       </div>
     </footer>
