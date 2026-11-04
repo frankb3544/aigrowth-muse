@@ -34,14 +34,14 @@ function FeaturedCard({ tool }: { tool: Tool }) {
 
 export default function Tools() {
   return (
-    <section id="tools" className="py-16 lg:py-24">
+    <section id="tools" className="bg-brand-navy-deep py-16 text-white lg:py-24">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-3xl">
           <SectionTag>Our tools</SectionTag>
-          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance text-brand-navy-deep sm:text-5xl lg:text-6xl">
+          <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
             Tools we built, <span className="marker">because we needed them</span>
           </h2>
-          <p className="mt-4 text-lg leading-8 text-brand-navy-deep/72">
+          <p className="mt-4 text-lg leading-8 text-white/72">
             Every tool here started as a real problem in a real business.
             They&apos;re standalone — use any of them on its own, no
             membership required.

@@ -11,7 +11,6 @@ import PromptPackStrip from "@/components/PromptPackStrip";
 import Community from "@/components/Community";
 import Tools from "@/components/Tools";
 import CharlottePrograms from "@/components/CharlottePrograms";
-import FounderLetter from "@/components/FounderLetter";
 import Faq from "@/components/Faq";
 import ContactBand from "@/components/ContactBand";
 import FinalCta from "@/components/FinalCta";
@@ -51,9 +50,6 @@ export default function Home() {
         </Reveal>
         <Reveal>
           <CharlottePrograms />
-        </Reveal>
-        <Reveal>
-          <FounderLetter />
         </Reveal>
         <Reveal>
           <Faq />

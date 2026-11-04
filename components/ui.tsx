@@ -44,6 +44,7 @@ export function PageHero({
   note,
   stamp,
   motifVariant = 0,
+  ticket,
 }: {
   tag: string;
   title: string;
@@ -52,6 +53,9 @@ export function PageHero({
   note?: string;
   stamp?: string;
   motifVariant?: number;
+  /** Work-order ticket header strip (consulting): a WO number plus
+   *  factual field/value pairs printed along the top of the hero. */
+  ticket?: { no: string; fields: [string, string][] };
 }) {
   const dark = theme === "blueprint" || theme === "bench";
 
@@ -65,13 +69,19 @@ export function PageHero({
           : theme === "local"
             ? "bg-brand-sky/30"
             : theme === "notebook"
-              ? "ruled-paper"
+              ? "ruled-paper-sheet border-b-2 border-brand-navy/10"
               : theme === "letter"
-                ? "paper-texture"
+                ? "paper-texture border-b-2 border-brand-navy/10 bg-brand-paper"
                 : "";
 
   return (
     <section className={`relative overflow-hidden ${sectionClass}`}>
+      {theme === "blueprint" && (
+        <div
+          aria-hidden="true"
+          className="blueprint-major absolute inset-0"
+        />
+      )}
       {theme === "notebook" && (
         <div
           aria-hidden="true"
@@ -83,6 +93,27 @@ export function PageHero({
           variant={motifVariant}
           className="absolute top-10 right-6 hidden h-12 w-20 sm:block lg:right-10"
         />
+        {ticket && (
+          <div className="mb-9 flex flex-wrap items-stretch gap-px overflow-hidden rounded-lg border-2 border-dashed border-brand-sky/40 bg-brand-sky/25 text-[11px] font-extrabold tracking-[0.18em] uppercase">
+            <span className="flex items-center bg-brand-orange px-4 py-2.5 text-white">
+              Work order · {ticket.no}
+            </span>
+            {ticket.fields.map(([label, value]) => (
+              <span
+                key={label}
+                className="flex items-center gap-2 bg-brand-navy-deep/60 px-4 py-2.5 text-white/65"
+              >
+                {label}
+                <span className="text-sm tracking-normal text-brand-amber normal-case">
+                  {value}
+                </span>
+              </span>
+            ))}
+            <span className="hidden items-center px-4 py-2.5 font-hand text-lg tracking-normal text-brand-sky normal-case lg:flex">
+              one bottleneck at a time
+            </span>
+          </div>
+        )}
         <div className="flex flex-wrap items-center gap-4">
           <SectionTag>{tag}</SectionTag>
           {stamp && (

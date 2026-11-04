@@ -229,6 +229,49 @@
   }
 }
 
+/* Staggered rise-in for grids of items (calendar cells, program cards).
+   Items start hidden and settle once the parent adds .is-visible;
+   per-item transition-delay is set inline. */
+.rise-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
+}
+.rise-item.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rise-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Major blueprint grid — the large squares laid over .blueprint's fine
+   grid on the consulting work-order hero, like a real drawing sheet. */
+.blueprint-major {
+  background-image:
+    linear-gradient(rgba(147, 197, 253, 0.16) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(147, 197, 253, 0.16) 1.5px, transparent 1.5px);
+  background-size: 140px 140px;
+}
+
+/* Ruled notebook lines on the brighter paper tone — the learn hero reads
+   as a sheet of notebook paper sitting on the cream desk, so the hero
+   band is defined like every other page's hero. */
+.ruled-paper-sheet {
+  background-color: #fffdf7;
+  background-image: linear-gradient(
+    rgba(147, 197, 253, 0.4) 1px,
+    transparent 1px
+  );
+  background-size: 100% 32px;
+}
+
 /* Card hover lift, the mockup's card treatment */
 .card-lift {
   transition:

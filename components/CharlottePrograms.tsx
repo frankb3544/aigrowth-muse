@@ -1,5 +1,6 @@
 import { programs } from "@/lib/data";
 import { SectionTag } from "./ui";
+import ProgramsShowcase from "./ProgramsShowcase";
 
 export default function CharlottePrograms({
   variant,
@@ -23,6 +24,13 @@ export default function CharlottePrograms({
           </p>
         </div>
 
+        {!bulletin && (
+          <div className="mt-12">
+            <ProgramsShowcase />
+          </div>
+        )}
+
+        {bulletin && (
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {programs.map((program, index) => (
             <article
@@ -45,6 +53,7 @@ export default function CharlottePrograms({
             </article>
           ))}
         </div>
+        )}
       </div>
     </section>
   );

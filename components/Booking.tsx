@@ -7,10 +7,24 @@ import {
 } from "@/lib/site";
 import { SectionTag } from "./ui";
 
-export default function Booking() {
+export default function Booking({ variant }: { variant?: "signoff" }) {
+  const signoff = variant === "signoff";
   return (
-    <section id="book" className="bg-brand-navy py-16 text-white lg:py-24">
+    <section
+      id="book"
+      className={`py-16 text-white lg:py-24 ${signoff ? "blueprint" : "bg-brand-navy"}`}
+    >
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        {signoff && (
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-3 border-y-2 border-dashed border-brand-sky/40 py-4">
+            <p className="text-xs font-extrabold tracking-[0.22em] text-brand-sky uppercase">
+              Work order — sign-off &amp; scheduling
+            </p>
+            <p className="font-hand text-2xl leading-none text-brand-amber">
+              last page of the order
+            </p>
+          </div>
+        )}
         <div className="max-w-3xl">
           <SectionTag>Book your audit</SectionTag>
           <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
@@ -91,6 +105,31 @@ export default function Booking() {
             )}
           </li>
         </ol>
+
+        {signoff && (
+          <div className="mt-12 flex flex-col gap-6 border-t-2 border-dashed border-brand-sky/40 pt-8 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-xl">
+              <p className="font-hand text-4xl text-brand-amber">
+                Booked = signed off.
+              </p>
+              <p className="mt-3 leading-7 text-white/72">
+                Picking your time is the signature on this work order. The{" "}
+                {AUDIT_PRICE} comes after — one payment, no subscription, no
+                surprise charges later.
+              </p>
+              <div
+                aria-hidden="true"
+                className="mt-6 border-b-2 border-dashed border-white/35"
+              />
+              <p className="mt-2 text-[11px] font-extrabold tracking-[0.22em] text-white/45 uppercase">
+                Signature — your booked time
+              </p>
+            </div>
+            <span className="inline-block w-fit rotate-2 rounded-md border-2 border-brand-amber px-4 py-2 font-hand text-2xl leading-none text-brand-amber">
+              Book first · pay after
+            </span>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -29,10 +29,21 @@ export default function Diagnostic({ variant }: { variant?: "spec" }) {
           </p>
         </div>
 
+        {spec && (
+          <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-y-2 border-dashed border-brand-sky/40 py-3.5">
+            <p className="text-[11px] font-extrabold tracking-[0.22em] text-brand-sky uppercase">
+              WO-01 · Diagnostic
+            </p>
+            <p className="text-[11px] font-extrabold tracking-[0.22em] text-white/50 uppercase">
+              Scope — the RACE walk
+            </p>
+          </div>
+        )}
+
         <div
           role="tablist"
           aria-label="Business stages"
-          className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"
+          className={`${spec ? "mt-6" : "mt-10"} grid gap-3 sm:grid-cols-2 lg:grid-cols-4`}
         >
           {diagnosticStages.map((stage) => {
             const selected = stage.id === activeId;

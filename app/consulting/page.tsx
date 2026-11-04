@@ -7,6 +7,7 @@ import ContactBand from "@/components/ContactBand";
 import Process from "@/components/Process";
 import { PageHero, PageShell } from "@/components/ui";
 import { faqs } from "@/lib/data";
+import { AUDIT_PRICE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "AI Consulting — the Pro AI Audit, Build Sprints & Team Program",
@@ -37,16 +38,24 @@ export default function ConsultingPage() {
         title="Find the bottleneck. Fix it first."
         intro="Our consulting starts with one honest walk through your business — how customers find you, reach you, buy from you, and come back. We name the single bottleneck costing you the most, then build in the right order. No ten-tool shopping spree, no jargon."
         theme="blueprint"
-        stamp="Work order"
+        stamp="Start here"
         note="Start with the audit — the rest follows."
         motifVariant={1}
+        ticket={{
+          no: "001",
+          fields: [
+            ["Start", "Pro AI Audit"],
+            ["Audit", AUDIT_PRICE],
+            ["Terms", "Book first · pay after"],
+          ],
+        }}
       />
       <Diagnostic variant="spec" />
       <Consulting variant="blueprint" />
-      <Process />
-      <Booking />
+      <Process variant="work-order" />
+      <Booking variant="signoff" />
       <Faq />
-      <ContactBand />
+      <ContactBand variant="work-order" />
     </PageShell>
   );
 }
