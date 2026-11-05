@@ -7,6 +7,7 @@ import ContactBand from "@/components/ContactBand";
 import Process from "@/components/Process";
 import { PageHero, PageShell } from "@/components/ui";
 import { faqs } from "@/lib/data";
+import { auditServiceJsonLd, faqPageJsonLd } from "@/lib/schema";
 import { AUDIT_PRICE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -16,15 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/consulting" },
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.slice(0, 3).map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: { "@type": "Answer", text: faq.answer },
-  })),
-};
+const faqJsonLd = faqPageJsonLd(faqs);
 
 export default function ConsultingPage() {
   return (
@@ -32,6 +25,12 @@ export default function ConsultingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(auditServiceJsonLd),
+        }}
       />
       <PageHero
         tag="AI consulting"

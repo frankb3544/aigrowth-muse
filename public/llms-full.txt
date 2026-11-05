@@ -1,0 +1,70 @@
+# Build AI From Here — extended reference
+
+Build AI From Here is the public brand of AI Growth Community LLC, based in Charlotte, North Carolina. It teaches practical AI to small businesses, real estate professionals, and everyday people, and it builds AI systems for Charlotte-area teams. Its promise: "Practical AI, one small win at a time." Its tagline: "No coding. No overwhelm. Just practical AI, one small win at a time."
+
+Run by Frank and Rico — two AI product builders. Frank has 20+ years of web development and app development experience.
+
+Website: https://buildaifromhere.com
+Email: grow@buildaifromhere.com
+Phone: (704) 900-1645
+Community: https://www.skool.com/build-ai-from-here-5063
+Instagram: https://www.instagram.com/buildaifromhere
+TikTok: https://www.tiktok.com/@buildaifromhere
+
+## Consulting
+
+Consulting leads the business. Three offers, in order:
+
+1. Pro AI Audit — $199 (the only published consulting price). A one-on-one diagnostic, built on the RACE walk: how customers find you (Reach), reach you (Acquire), buy from you (Convert), and come back (Expand). It names the single bottleneck costing the business the most and delivers a written plan with the top three automations to build, in order. The client keeps the plan either way. Booking flow: book first, pay after — book at https://cal.com/franklinbellamy/build-ai-from-here
+2. Build Sprint — scoped after the audit (no published price). Builds and deploys the one bottleneck system from the audit plan.
+3. Team Program — scoped after the audit (no published price). Ongoing work: evaluations, a weekly sync, and the next bottleneck.
+
+A standing rule across all client-facing AI work: AI drafts, a human reads, then it ships.
+
+## Community (Skool)
+
+- Free tier: a daily AI tip, a weekly tool video, starter prompt packs, and a monthly open Q&A. No card required.
+- Premium — $10/month: everything in Free, plus the full prompt library, a prompt pack personalised to the member's path, the Mobile App Builder course, the full course library, Book Briefs twice a month, and member pricing on audits and tools.
+- The free starter prompt pack holds 12 prompts, grouped Business / Realtor / Everyday, and also lives in the Skool classroom.
+
+## Charlotte programs
+
+- Thursday Build Sessions: a live build every Thursday, 6:00 PM ET, at Collaboration Central, Charlotte, NC — real systems built in public.
+- The Automation Lab: a monthly hands-on session.
+- The Builder's Cohort: a guided group program for builders.
+- Build School: AI sessions for students.
+- AI Breakfast: planned (not yet running).
+
+## Frequently asked questions (verbatim from buildaifromhere.com)
+
+Q: What does the $199 Pro AI Audit include?
+A: A full walk through how your business actually runs. We map how customers find you, reach you, buy from you, and come back — then name the ONE bottleneck costing you the most, and hand you a written plan with the top three automations to build, in order. You keep the plan either way.
+
+Q: How does book first, pay after work?
+A: Simple: you book first. Pick a time that suits you and your audit goes on the calendar. After your audit is scheduled, you'll get the payment link to pay the $199 and lock it in. No paying for a call you haven't booked yet.
+
+Q: What happens after the audit?
+A: You get the written plan. From there it's your call: build it yourself with the plan in hand, learn alongside the community, or book a Build Sprint and we'll build the first system with you, in your own tools.
+
+Q: Is the community really free?
+A: Yes. The free group on Skool costs nothing and asks for no card: a daily AI tip, a weekly tool video, starter prompt packs, and a monthly open Q&A. Join, look around, and stay as long as it's useful.
+
+Q: What does Premium add for $10 a month?
+A: Everything in Free, plus the full prompt library, a prompt pack personalised to your path, the Mobile App Builder course, the full course library (new courses included), Book Briefs twice a month, and member pricing on audits and tools.
+
+Q: Do I need to be technical?
+A: No. No coding, no jargon, no setup headaches. If you can describe the problem in plain words, you're ready — we build in everyday tools and explain every step as we go.
+
+## Tools built and run by Build AI From Here
+
+- ClosePay (https://closepay.app) — commission tracking for real estate agents.
+- Vibizm (https://vibizm.com) — an idea development and execution platform.
+- Inspect Sumo (https://inspectsumo.com) — turns a home-inspection PDF into a severity-prioritised summary in under two minutes, with cost estimates and a repair-request letter. First report free.
+- Nurse K (https://nurse-k-demo.vercel.app) — a daily dashboard for nursing students.
+- Cobles Landing Reservations (https://cobles-landing-reservations.vercel.app) — reservations for a 25-acre family retreat in Polkton, NC.
+- Salintus (https://salintus.com) — mental fitness without therapy: a voice-first, non-clinical companion. It is not therapy or treatment.
+
+## Also built and owned
+
+- NewConstructionInsider.net — a Charlotte-area new-construction buyer resource.
+- CoblesLanding.com — the Cobles Landing retreat site.

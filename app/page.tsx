@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import TrustBar from "@/components/TrustBar";
 import Hero from "@/components/Hero";
@@ -17,10 +18,23 @@ import FinalCta from "@/components/FinalCta";
 import Countdown from "@/components/Countdown";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import { faqs } from "@/lib/data";
+import { faqPageJsonLd } from "@/lib/schema";
+
+export const metadata: Metadata = {
+  title: "Build AI From Here — practical AI for Charlotte businesses & everyday people",
+  description:
+    "Practical AI for Charlotte-area businesses and everyday people. Start with the $199 Pro AI Audit, join the free community, and catch a live build session every Thursday. No coding. No overwhelm.",
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-brand-cream font-sans text-brand-navy-deep">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(faqs)) }}
+      />
       <TrustBar />
       <Header />
       <main className="flex-1">

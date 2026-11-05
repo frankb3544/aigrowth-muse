@@ -4,6 +4,7 @@ import Community from "@/components/Community";
 import FinalCta from "@/components/FinalCta";
 import Proof from "@/components/Proof";
 import { PageHero, PageShell } from "@/components/ui";
+import { communityJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "The Community — free to start, practical every day",
@@ -15,6 +16,10 @@ export const metadata: Metadata = {
 export default function CommunityPage() {
   return (
     <PageShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(communityJsonLd) }}
+      />
       <PageHero
         tag="The community"
         title="Learn it a little at a time, with people like you."

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Caveat, Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
+import { siteGraphJsonLd } from "@/lib/schema";
 import MobileActionBar from "@/components/MobileActionBar";
 import ContactModal from "@/components/ContactModal";
 
@@ -48,18 +49,9 @@ export const metadata: Metadata = {
       "Practical AI for Charlotte-area businesses and everyday people. " +
       SITE_TAGLINE,
   },
-};
-
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "AI Growth Community LLC",
-  url: SITE_URL,
-  brand: { "@type": "Brand", name: SITE_NAME },
-  slogan: SITE_TAGLINE,
-  areaServed: "Charlotte, North Carolina",
-  description:
-    "Build AI From Here teaches practical AI to small businesses, real estate professionals, and everyday people — no coding, no jargon — and builds AI systems for Charlotte-area teams.",
+  verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION }
+    : undefined,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -72,7 +64,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd),
+            __html: JSON.stringify(siteGraphJsonLd),
           }}
         />
         {children}

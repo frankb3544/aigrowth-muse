@@ -1,0 +1,58 @@
+# Build AI From Here
+
+> Build AI From Here (AI Growth Community LLC) teaches practical AI to Charlotte-area small businesses, real estate professionals, and everyday people — no coding, no overwhelm, just practical AI, one small win at a time. It offers AI consulting led by the $199 Pro AI Audit, a free-and-Premium community on Skool, live weekly build sessions in Charlotte, NC, and a bench of its own AI tools.
+
+Key facts:
+- Location: Charlotte, North Carolina (serving Charlotte, Concord, and Cabarrus County)
+- Run by: Frank and Rico, two AI product builders
+- Headline offer: Pro AI Audit, $199 — a one-on-one diagnostic that names the single bottleneck costing a business the most and hands over a written plan. Book first, pay after.
+- Community: Build AI From Here on Skool — Free tier (daily AI tip, weekly tool video, starter prompt packs, monthly open Q&A) and Premium at $10/month (full prompt library, courses, Book Briefs, member pricing)
+- Live sessions: a build session every Thursday, 6:00 PM ET, at Collaboration Central, Charlotte, NC; plus a monthly Automation Lab
+- Contact: grow@buildaifromhere.com · (704) 900-1645
+
+## Main pages
+
+- [Home](https://buildaifromhere.com/): Start here — the audit, the community, the tools, and the weekly Thursday build sessions.
+- [AI Consulting](https://buildaifromhere.com/consulting): The Pro AI Audit ($199, book first, pay after), Build Sprints, and the Team Program.
+- [Community](https://buildaifromhere.com/community): The Skool community — Free and Premium ($10/month) tiers explained.
+- [Our Tools](https://buildaifromhere.com/tools): The software we have built and run ourselves.
+- [Charlotte](https://buildaifromhere.com/charlotte): Local programs — Thursday build sessions, the Automation Lab, the Builder's Cohort, Build School, and AI Breakfast (planned).
+- [Learn](https://buildaifromhere.com/learn): Plain-English guides to practical AI, grouped by track.
+- [Free starter prompt pack](https://buildaifromhere.com/prompt-pack): Twelve copy-and-paste prompts for business owners, realtors, and everyday jobs.
+- [About](https://buildaifromhere.com/about): Who runs Build AI From Here and why it exists.
+
+## Offers
+
+- Pro AI Audit — $199: [Consulting](https://buildaifromhere.com/consulting) · Book: https://cal.com/franklinbellamy/build-ai-from-here (book first, pay after; Build Sprints and the Team Program are scoped after the audit)
+- Community membership — Free, or Premium $10/month: https://www.skool.com/build-ai-from-here-5063
+
+## Our tools
+
+- [ClosePay](https://buildaifromhere.com/tools/closepay): Commission tracking for real estate agents. https://closepay.app
+- [Vibizm](https://buildaifromhere.com/tools/vibizm): An idea development and execution platform. https://vibizm.com
+- [Inspect Sumo](https://buildaifromhere.com/tools/inspect-sumo): Turns a home-inspection PDF into a severity-prioritised summary with cost estimates and a repair-request letter. https://inspectsumo.com
+- [Nurse K](https://buildaifromhere.com/tools/nurse-k): A daily dashboard app for nursing students. https://nurse-k-demo.vercel.app
+- [Cobles Landing Reservations](https://buildaifromhere.com/tools/cobles-landing-reservations): Booking for a 25-acre family retreat in Polkton, NC. https://cobles-landing-reservations.vercel.app
+- [Salintus](https://buildaifromhere.com/tools/salintus): Mental fitness without therapy — a voice-first, non-clinical companion app. https://salintus.com
+
+## Guides (Learn)
+
+- [What is an AI audit, in plain words?](https://buildaifromhere.com/learn/what-is-an-ai-audit)
+- [The phone rang. Nobody picked up. Again.](https://buildaifromhere.com/learn/missed-calls-cost-you)
+- [Thursdays, we build in public](https://buildaifromhere.com/learn/thursdays-we-build-in-public)
+- [The follow-up gap: where good businesses quietly lose customers](https://buildaifromhere.com/learn/the-follow-up-gap)
+- [AI for realtors: where it genuinely helps — and where a human stays in charge](https://buildaifromhere.com/learn/ai-for-realtors-human-in-charge)
+- [The review engine: how local shops turn finished jobs into being found](https://buildaifromhere.com/learn/the-review-engine)
+- [AI at the kitchen table: the small jobs it quietly takes off your plate](https://buildaifromhere.com/learn/ai-at-the-kitchen-table)
+
+## Elsewhere
+
+- Skool community: https://www.skool.com/build-ai-from-here-5063
+- Instagram: https://www.instagram.com/buildaifromhere
+- TikTok: https://www.tiktok.com/@buildaifromhere
+
+## Optional
+
+- [Privacy policy](https://buildaifromhere.com/privacy)
+- [Terms](https://buildaifromhere.com/terms)
+- Extended details for language models: https://buildaifromhere.com/llms-full.txt

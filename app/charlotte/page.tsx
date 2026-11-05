@@ -4,6 +4,7 @@ import CharlottePrograms from "@/components/CharlottePrograms";
 import FinalCta from "@/components/FinalCta";
 import Proof from "@/components/Proof";
 import { PageHero, PageShell } from "@/components/ui";
+import { thursdayEventJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Charlotte — local programs, live builds & the Automation Lab",
@@ -15,6 +16,12 @@ export const metadata: Metadata = {
 export default function CharlottePage() {
   return (
     <PageShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(thursdayEventJsonLd),
+        }}
+      />
       <PageHero
         tag="Charlotte, NC"
         title="Built here, for the people who work here."
