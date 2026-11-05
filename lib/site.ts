@@ -66,7 +66,8 @@ export const CONTACT_EMAIL = "grow@buildaifromhere.com";
 
 export const SOCIAL_LINKS = {
   facebook: "",
-  instagram: "",
+  instagram: "https://www.instagram.com/buildaifromhere",
+  tiktok: "https://www.tiktok.com/@buildaifromhere",
   linkedin: "",
   youtube: "",
 };
