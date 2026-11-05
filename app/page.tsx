@@ -22,9 +22,9 @@ import { faqs } from "@/lib/data";
 import { faqPageJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Build AI From Here — practical AI for Charlotte businesses & everyday people",
+  title: "Build AI From Here — Practical AI for Any Business.",
   description:
-    "Practical AI for Charlotte-area businesses and everyday people. Start with the $199 Pro AI Audit, join the free community, and catch a live build session every Thursday. No coding. No overwhelm.",
+    "Practical AI for local businesses and everyday people. Start with the $199 Pro AI Audit and join the free community. No coding. No overwhelm.",
   alternates: { canonical: "/" },
 };
 
