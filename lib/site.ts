@@ -64,6 +64,9 @@ export const SITE_TAGLINE =
 export const CONTACT_PHONE = "(704) 900-1645";
 export const CONTACT_EMAIL = "grow@buildaifromhere.com";
 
+/** Google Tag Manager container (public ID). Carries the GA4 tag, G-MQP3CGPFN1. */
+export const GTM_ID = "GTM-T5Q86899";
+
 export const SOCIAL_LINKS = {
   facebook: "",
   instagram: "https://www.instagram.com/buildaifromhere",
