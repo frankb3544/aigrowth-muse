@@ -62,7 +62,7 @@ export const SITE_TAGLINE =
  * changes needed.
  */
 export const CONTACT_PHONE = "(704) 900-1645";
-export const CONTACT_EMAIL = "build@buildaifromhere.com";
+export const CONTACT_EMAIL = "grow@buildaifromhere.com";
 
 export const SOCIAL_LINKS = {
   facebook: "",

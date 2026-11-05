@@ -39,7 +39,7 @@ const sections = [
   {
     heading: "Your choices",
     paragraphs: [
-      "You can ask us what information we hold about you, ask us to correct it, or ask us to delete it. The easiest way to reach us is the contact form on this site or an email to build@buildaifromhere.com, and we will act on your request promptly.",
+      "You can ask us what information we hold about you, ask us to correct it, or ask us to delete it. The easiest way to reach us is the contact form on this site or an email to grow@buildaifromhere.com, and we will act on your request promptly.",
       "Last updated: November 1, 2026. If this policy changes, the new version will be posted on this page.",
     ],
   },
